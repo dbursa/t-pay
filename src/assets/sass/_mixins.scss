@@ -1,0 +1,23 @@
+@mixin row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin bank {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: $border-radius;
+	box-sizing: border-box;
+	height: 64px;
+	width: 86px;
+}
+
+@mixin box-sizing {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
