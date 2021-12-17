@@ -53,7 +53,8 @@ main {
     main nav {
       padding: 24px; }
     main button {
-      height: 40px; }
+      height: 40px;
+      border-width: 2px; }
       main button.close {
         display: flex;
         flex-direction: row;
@@ -114,7 +115,12 @@ main {
             top: -2px; }
         main .dropdown > div {
           top: 42px;
-          width: 108px; }
+          width: 118px;
+          padding: 0;
+          border-width: 2px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box; }
           main .dropdown > div a {
             font-size: 14px;
             line-height: 1.1;
@@ -133,6 +139,9 @@ main {
       font-size: 10px;
       margin-right: 9px;
       color: #878d96; }
+    @media (min-width: 768px) {
+      main footer p {
+        font-size: 13px; } }
 
 .pay-methods {
   width: 272px;

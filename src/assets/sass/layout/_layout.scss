@@ -69,6 +69,7 @@ main {
 
 		button {
 			height: 40px;
+			border-width: 2px;
 
 			&.close {
 				@include row;
@@ -157,7 +158,11 @@ main {
 
 			> div {
 				top: 42px;
-				width: 108px;
+				width: 118px;
+				padding: 0;
+				border-width: 2px;
+				@include box-sizing;
+
 				a {
 					font-size: 14px;
 					line-height: 1.1;
@@ -181,6 +186,12 @@ main {
 			font-size: 10px;
 			margin-right: 9px;
 			color: $footer-color;
+		}
+
+		@media (min-width: $tablet) {
+			p {
+				font-size: 13px;
+			}
 		}
 	}
 }
