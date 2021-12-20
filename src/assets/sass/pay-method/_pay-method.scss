@@ -5,6 +5,12 @@
 	margin: auto;
 	background-color: #fff;
 
+	svg {
+		rect {
+			@include trans;
+		}
+	}
+
 	h2 {
 		color: $h2-color;
 		font-weight: 600;
@@ -73,7 +79,7 @@
 			&.first-row {
 				button {
 					&:nth-child(1) {
-						background: #135091;
+						background: rgba(19, 80, 145, 0.1);
 					}
 
 					&:nth-child(2) {
@@ -145,6 +151,275 @@
 
 				&:nth-child(2) {
 					background: rgba(255, 165, 0, 0.2);
+				}
+			}
+		}
+	}
+
+	@media (min-width: $tablet) {
+		width: 480px;
+		border-radius: $border-radius-lg;
+		padding: 40px;
+
+		h2 {
+			font-size: 14px;
+			line-height: 1.2;
+			margin-bottom: 10px;
+
+			&:first-child {
+				margin-bottom: 14px;
+			}
+		}
+
+		> div {
+			margin-bottom: 20px;
+
+			a {
+				&.btn {
+					height: 64px;
+
+					&:first-child {
+						.options {
+							svg {
+								&:first-child {
+									margin-left: 0;
+								}
+							}
+						}
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			button {
+				width: 152px;
+			}
+		}
+
+		.deffered {
+			button {
+				@include trans;
+
+				&:hover {
+					background: #0db1f0;
+
+					svg {
+						path {
+							&:nth-child(2) {
+								fill: #fff;
+							}
+
+							&:nth-child(3) {
+								fill: #00b0f0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.internet-banking {
+			div {
+				margin-bottom: 12px;
+
+				&.first-row {
+					button {
+						@include trans;
+
+						&:nth-child(1) {
+							&:hover {
+								background: #135091;
+
+								svg {
+									path {
+										fill: #fff;
+
+										&:last-child {
+											fill: #ed1c24;
+										}
+									}
+								}
+							}
+						}
+
+						&:nth-child(2) {
+							&:hover {
+								background: #cc0033;
+
+								svg {
+									rect {
+										stroke: #fff;
+									}
+
+									path {
+										&:nth-child(1) {
+											fill: #fff;
+										}
+
+										&:nth-child(2) {
+											fill: #fff;
+										}
+									}
+								}
+							}
+						}
+
+						&:nth-child(3) {
+							&:hover {
+								background: #003366;
+
+								svg {
+									path {
+										&:first-child {
+											fill: #fff;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&.second-row {
+					button {
+						@include trans;
+
+						&:nth-child(1) {
+							&:hover {
+								background: #e30613;
+
+								svg {
+									rect {
+										stroke: #ffed00;
+									}
+								}
+							}
+						}
+
+						&:nth-child(2) {
+							&:hover {
+								background: #fff200;
+							}
+						}
+
+						&:nth-child(3) {
+							&:hover {
+								background: #222222;
+							}
+						}
+					}
+				}
+
+				&.third-row {
+					button {
+						@include trans;
+
+						&:nth-child(1) {
+							&:hover {
+								background: #9ec32b;
+							}
+						}
+
+						&:nth-child(2) {
+							position: relative;
+
+							&::before {
+								content: '';
+								position: absolute;
+								top: 0;
+								right: 0;
+								left: 0;
+								bottom: 0;
+								background: linear-gradient(
+									49.02deg,
+									#140757 25.15%,
+									#270953 28.78%,
+									#6d1042 42.91%,
+									#a41535 55.65%,
+									#cc192c 66.54%,
+									#e41b26 75.16%,
+									#ed1c24 80.45%
+								);
+								border-radius: $border-radius;
+								transition: 0.3s;
+								opacity: 0;
+							}
+
+							svg {
+								position: relative;
+								z-index: 1;
+
+								path {
+									pointer-events: all;
+								}
+							}
+
+							&:hover {
+								&::before {
+									opacity: 1;
+								}
+								svg {
+									path {
+										fill: #fff;
+									}
+								}
+							}
+						}
+
+						&:nth-child(3) {
+							&:hover {
+								background: #0db1f0;
+
+								svg {
+									path {
+										&:last-child {
+											fill: #fff;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.others {
+			div {
+				button {
+					@include trans;
+
+					&:nth-child(1) {
+						@include row;
+						justify-content: center;
+						align-items: center;
+
+						&:hover {
+							background: #878d96;
+							color: #fff;
+						}
+					}
+
+					&:nth-child(2) {
+						&:hover {
+							background: #f7931a;
+
+							svg {
+								path {
+									&:nth-child(1) {
+										fill: #fff;
+									}
+
+									&:nth-child(2) {
+										fill: #f7931a;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}

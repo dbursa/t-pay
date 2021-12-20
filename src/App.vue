@@ -18,7 +18,7 @@
       </nav>
       
       <payment-info v-if="isInfo" />
-      <pay-method/>
+      <pay-method :desktop-version="this.tabletSize"/>
 
       <footer>
         <p>Bezpečnou a rychlou platbu zařídí</p>

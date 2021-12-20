@@ -3,10 +3,11 @@
 body {
 	padding: 0;
 	margin: 0;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	font-family: 'Sofia Pro', Arial, Helvetica, sans-serif;
 	position: relative;
+	overflow-x: hidden;
 
 	#app {
 		height: 100%;
@@ -71,6 +72,12 @@ main {
 			height: 40px;
 			border-width: 2px;
 
+			svg {
+				path {
+					@include trans;
+				}
+			}
+
 			&.close {
 				@include row;
 				width: 184px;
@@ -78,6 +85,19 @@ main {
 				line-height: 1.3;
 				align-items: center;
 				justify-content: space-around;
+				@include trans;
+
+				&:hover {
+					background: $main-border;
+					border-color: $border-color-hover;
+					color: #fff;
+
+					svg {
+						path {
+							fill: #fff;
+						}
+					}
+				}
 			}
 
 			&.info {
@@ -85,9 +105,21 @@ main {
 				font-size: 14px;
 				line-height: 1.3;
 				justify-content: center;
+				@include trans;
 
 				div {
 					margin-left: 8px;
+				}
+				&:hover {
+					background: $main-border;
+					border-color: $border-color-hover;
+					color: #fff;
+
+					svg {
+						path {
+							fill: #fff;
+						}
+					}
 				}
 			}
 		}

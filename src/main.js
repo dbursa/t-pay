@@ -22,6 +22,8 @@ import MBank from './components/icons/pay-methods/MBank.vue'
 import Moneta from './components/icons/pay-methods/Moneta.vue'
 import PostovniSporitelna from './components/icons/pay-methods/PostovniSporitelna.vue'
 import RaiffeinsenBank from './components/icons/pay-methods/RaiffeinsenBank.vue'
+import OtherBank from './components/icons/pay-methods/OtherBank.vue'
+
 
 Vue.component('pay-method', PayMethod)
 Vue.component('payment-info', PaymentInfo)
@@ -46,6 +48,8 @@ Vue.component('m-bank', MBank)
 Vue.component('moneta', Moneta)
 Vue.component('postovni-sporitelna', PostovniSporitelna)
 Vue.component('raiffeinsen-bank', RaiffeinsenBank)
+Vue.component('other-bank', OtherBank)
+
 
 
 import Vue from 'vue'

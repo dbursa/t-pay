@@ -21,3 +21,7 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+
+@mixin trans {
+	transition: all 0.3s;
+}
