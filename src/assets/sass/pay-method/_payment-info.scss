@@ -1,8 +1,8 @@
 .payment-info {
+	position: absolute;
+	top: -160px;
 	width: 272px;
-	margin-top: 12px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: -12px;
 
 	h2 {
 		text-transform: uppercase;
@@ -44,10 +44,60 @@
 		}
 
 		a {
-			text-decoration: none;
 			color: #fff;
 			font-size: 14px;
 			line-height: 1.4;
 		}
+	}
+
+	@media (min-width: $tablet) {
+		margin-left: -40px;
+		top: -230px;
+
+		h2 {
+			font-size: 12px;
+
+			&:first-child {
+				margin-bottom: 8px;
+			}
+
+			&:nth-child(2) {
+				margin-bottom: 12px;
+			}
+		}
+
+		.to-pay {
+			margin-bottom: 40px;
+
+			div {
+				font-size: 28px;
+				line-height: 1.6;
+			}
+		}
+
+		.dealer {
+			margin-bottom: 0;
+
+			p {
+				font-size: 16px;
+				line-height: 1.7;
+			}
+
+			a {
+				font-size: 16px;
+				line-height: 1.7;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $desktop) {
+		left: 600px;
+		top: 50%;
+		margin-top: -25%;
+		margin-left: 0;
 	}
 }

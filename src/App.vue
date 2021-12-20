@@ -1,67 +1,69 @@
 <template>
-  <div id="app">
-    <main>
-      <nav>
-        <button class="close">
-          <close/>
-          <div v-if="tabletSize">Návrat do obchodu</div>
-        </button>
+	<div id="app">
+		<main>
+			<nav>
+				<button class="close">
+					<close />
+					<div v-if="tabletSize">Návrat do obchodu</div>
+				</button>
 
-        <div>
-          <button class="info" @click="showInfo()">
-            <info />
-            <div>Detail platby</div>
-          </button>
+				<div>
+					<button class="info" @click="showInfo()">
+						<info />
+						<div>Detail platby</div>
+					</button>
 
-          <dropdown locale="CZ" :tablet="tabletSize"/>
-        </div>
-      </nav>
-      
-      <payment-info v-if="isInfo" />
-      <pay-method :desktop-version="this.tabletSize"/>
+					<dropdown locale="CZ" :tablet="tabletSize" />
+				</div>
+			</nav>
 
-      <footer>
-        <p>Bezpečnou a rychlou platbu zařídí</p>
-        <the-pay/>
-      </footer>
-    </main>
-  </div>
+			<div :class="['main-table', { 'detail-payment': this.isInfo }]">
+				<pay-method :desktop-version="this.tabletSize" />
+				<payment-info v-if="isInfo" />
+			</div>
+
+			<footer>
+				<p>Bezpečnou a rychlou platbu zařídí</p>
+				<the-pay />
+			</footer>
+		</main>
+	</div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+	name: 'App',
 
-  data() {
-    return {
-      isInfo: false,
-      tabletSize: false,
-      windowWidth: window.innerWidth
-    }
-  },
+	data() {
+		return {
+			isInfo: false,
+			tabletSize: false,
+			windowWidth: window.innerWidth,
+		};
+	},
 
-  created() {
-      if (this.windowWidth >= 768) {
-        this.tabletSize = true
-      }
-  },
+	created() {
+		if (this.windowWidth >= 768) {
+			this.tabletSize = true;
+		}
+	},
 
-  methods: {
-    showInfo() {
-       this.isInfo = !this.isInfo
-    }
-  },
+	methods: {
+		showInfo() {
+			this.isInfo = !this.isInfo;
+		},
+	},
 
-  mounted() {
-    window.onresize = () => {
-      this.windowWidth = window.innerWidth
+	mounted() {
+		window.onresize = () => {
+			this.windowWidth = window.innerWidth;
 
-      if (this.windowWidth >= 768) {
-        this.tabletSize = true
-      } else {
-        this.tabletSize = false
-      }
-    }
-  }
-}
+			if (this.windowWidth >= 768) {
+				this.tabletSize = true;
+			} else {
+				this.tabletSize = false;
+			}
+		};
+	},
+};
 </script>

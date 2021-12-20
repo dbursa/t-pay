@@ -1,10 +1,4 @@
 .pay-methods {
-	width: 272px;
-	border-radius: $border-radius;
-	padding: 12px;
-	margin: auto;
-	background-color: #fff;
-
 	svg {
 		rect {
 			@include trans;
@@ -62,6 +56,9 @@
 
 		button {
 			@include bank;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
@@ -157,18 +154,14 @@
 	}
 
 	@media (min-width: $tablet) {
-		width: 480px;
-		border-radius: $border-radius-lg;
-		padding: 40px;
-
 		h2 {
 			font-size: 14px;
-			line-height: 1.2;
+			line-height: 1.1;
 			margin-bottom: 10px;
+		}
 
-			&:first-child {
-				margin-bottom: 14px;
-			}
+		.card {
+			margin-bottom: 14px;
 		}
 
 		> div {
@@ -314,6 +307,8 @@
 				}
 
 				&.third-row {
+					margin-bottom: 0;
+
 					button {
 						@include trans;
 
@@ -388,6 +383,7 @@
 		}
 
 		.others {
+			margin-bottom: 0;
 			div {
 				button {
 					@include trans;
@@ -400,6 +396,12 @@
 						&:hover {
 							background: #878d96;
 							color: #fff;
+
+							svg {
+								path {
+									fill: #fff;
+								}
+							}
 						}
 					}
 
