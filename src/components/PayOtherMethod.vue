@@ -31,7 +31,8 @@
 					/>
 					<a class="copy-text copy" data-clipboard-target="#card-number">
 						<span>Kopírovat</span>
-						<copy />
+						<copy v-if="!desktopVersion" />
+						<copy-lg v-else />
 					</a>
 				</label>
 			</div>
@@ -41,7 +42,8 @@
 					<span>Částka</span>
 					<input type="text" id="cost" value="23 485 Kč" readonly />
 					<a class="copy" data-clipboard-target="#cost">
-						<copy />
+						<copy v-if="!desktopVersion" />
+						<copy-lg v-else />
 					</a>
 				</label>
 			</div>
@@ -51,44 +53,47 @@
 					<span>Variabilní symbol</span>
 					<input type="text" id="variable-symbol" value="6074862244" readonly />
 					<a class="copy" data-clipboard-target="#variable-symbol">
-						<copy />
+						<copy v-if="!desktopVersion" />
+						<copy-lg v-else />
 					</a>
 				</label>
 			</div>
 		</form>
 
-		<div class="qr">
-			<div>
-				<img src="~@/assets/qr.png" width="160" height="160" alt="" />
+		<div class="group">
+			<div class="qr-img">
+				<img src="~@/assets/qr.png" alt="" />
 			</div>
 
-			<div>
-				<p>
-					Uložte si QR kód a následně jej nahrejte do mobilní aplikace vaší
-					banky pro rychlejší a bezchybné zadání platby.
-				</p>
+			<div class="text-wrapper">
+				<div class="qr-text">
+					<p>
+						Uložte si QR kód a následně jej nahrejte do mobilní aplikace vaší
+						banky pro rychlejší a bezchybné zadání platby.
+					</p>
 
-				<a href="">
-					<save />
-					<span>Uložit QR kód do telefonu</span>
-				</a>
-			</div>
-		</div>
+					<a href="">
+						<save />
+						<span>Uložit QR kód do telefonu</span>
+					</a>
+				</div>
 
-		<div class="bill">
-			<p>
-				Nebo si nechte platební údaje poslat<br />
-				na e-mail či vytisknout.
-			</p>
-			<div>
-				<a href="">
-					<email />
-					<span>Poslat e-mailem</span>
-				</a>
-				<a href="">
-					<print />
-					<span>Vytisknout</span>
-				</a>
+				<div class="bill">
+					<p>
+						Nebo si nechte platební údaje poslat<br />
+						na e-mail či vytisknout.
+					</p>
+					<div>
+						<a href="">
+							<email />
+							<span>Poslat e-mailem</span>
+						</a>
+						<a href="">
+							<print />
+							<span>Vytisknout</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

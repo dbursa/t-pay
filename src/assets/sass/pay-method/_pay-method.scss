@@ -38,6 +38,12 @@
 					background: $visa-mastercard-color;
 					margin-right: 0;
 
+					> div {
+						&:first-child {
+							margin-right: 5px;
+						}
+					}
+
 					.options {
 						@include row;
 						align-items: center;
@@ -45,11 +51,14 @@
 
 						svg {
 							&:first-child {
-								margin-left: 8px;
 								margin-right: 8px;
 							}
 						}
 					}
+				}
+
+				&:last-child {
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -106,6 +115,8 @@
 			}
 
 			&.third-row {
+				margin-bottom: 0;
+
 				button {
 					&:nth-child(1) {
 						background: rgba(158, 195, 43, 0.2);
@@ -133,7 +144,7 @@
 	}
 
 	.others {
-		margin-bottom: 8px;
+		margin-bottom: 0;
 		div {
 			@include row;
 
