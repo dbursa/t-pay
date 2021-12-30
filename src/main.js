@@ -1,12 +1,27 @@
 import PayMethod from './components/PayMethod.vue'
 import PaymentInfo from './components/PaymentInfo.vue'
-import Dropdown from './components/Dropdown.vue'
+import PayWithCard from './components/PayWithCard.vue'
+import PayOtherMethod from './components/PayOtherMethod.vue'
 
+import Dropdown from './components/Dropdown.vue'
+import ArrowDown from './components/icons/ArrowDown.vue'
+import ArrowBack from './components/icons/ArrowBack.vue'
 import Close from './components/icons/Close.vue'
 import World from './components/icons/World.vue'
 import Info from './components/icons/Info.vue'
-import ArrowDown from './components/icons/ArrowDown.vue'
 import ThePay from './components/icons/ThePay.vue'
+import Copy from './components/icons/Copy.vue'
+import Email from './components/icons/Email.vue'
+import Print from './components/icons/Print.vue'
+import Save from './components/icons/Save.vue'
+
+//desktop svg
+import ArrowBackLg from './components/icons/desktop/ArrowBackLg.vue'
+import CopyLg from './components/icons/desktop/CopyLg.vue'
+import EmailLg from './components/icons/desktop/EmailLg.vue'
+import PrintLg from './components/icons/desktop/PrintLg.vue'
+
+
 import ApplePay from './components/icons/pay-methods/ApplePay.vue'
 import GooglePay from './components/icons/pay-methods/GooglePay.vue'
 import MasterCard from './components/icons/pay-methods/MasterCard.vue'
@@ -23,15 +38,23 @@ import Moneta from './components/icons/pay-methods/Moneta.vue'
 import PostovniSporitelna from './components/icons/pay-methods/PostovniSporitelna.vue'
 import RaiffeinsenBank from './components/icons/pay-methods/RaiffeinsenBank.vue'
 import OtherBank from './components/icons/pay-methods/OtherBank.vue'
+import VisaHeader from './components/icons/pay-with-card/Visa.vue'
+import MasterCardHeader from './components/icons/pay-with-card/MasterCard.vue'
+//desktop svg
+import VisaHeaderLg from './components/icons/pay-with-card/desktop/VisaLg.vue'
+import MasterCardHeaderLg from './components/icons/pay-with-card/desktop/MasterCardLg.vue'
 
 
 Vue.component('pay-method', PayMethod)
+Vue.component('pay-with-card', PayWithCard)
 Vue.component('payment-info', PaymentInfo)
+Vue.component('pay-other-method', PayOtherMethod)
 Vue.component('dropdown', Dropdown)
 Vue.component('close', Close)
 Vue.component('world', World)
 Vue.component('info', Info)
 Vue.component('arrow-down', ArrowDown)
+Vue.component('arrow-back', ArrowBack)
 Vue.component('the-pay', ThePay)
 Vue.component('apple-pay', ApplePay)
 Vue.component('google-pay', GooglePay)
@@ -49,7 +72,22 @@ Vue.component('moneta', Moneta)
 Vue.component('postovni-sporitelna', PostovniSporitelna)
 Vue.component('raiffeinsen-bank', RaiffeinsenBank)
 Vue.component('other-bank', OtherBank)
+Vue.component('visa-header', VisaHeader)
+Vue.component('master-card-header', MasterCardHeader)
+Vue.component('copy', Copy)
+Vue.component('email', Email)
+Vue.component('print', Print)
+Vue.component('save', Save)
 
+
+
+//desktop
+Vue.component('visa-header-lg', VisaHeaderLg)
+Vue.component('master-card-header-lg', MasterCardHeaderLg)
+Vue.component('arrow-back-lg', ArrowBackLg)
+Vue.component('copy-lg', CopyLg)
+Vue.component('email-lg', EmailLg)
+Vue.component('print-lg', PrintLg)
 
 
 import Vue from 'vue'

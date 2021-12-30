@@ -16,6 +16,12 @@ body {
     height: 100%;
     width: 100%; }
 
+h1 {
+  margin: 0; }
+
+input {
+  font-family: inherit; }
+
 main {
   color: #c1c7cd;
   height: 100%;
@@ -182,6 +188,148 @@ main {
     @media (min-width: 768px) {
       main footer p {
         font-size: 13px; } }
+
+.overview-basis .back a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #697077;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  text-decoration: none; }
+  .overview-basis .back a :hover {
+    text-decoration: underline; }
+  .overview-basis .back a svg {
+    margin-right: 4px; }
+  @media (min-width: 768px) {
+    .overview-basis .back a {
+      font-size: 14px; }
+      .overview-basis .back a svg {
+        margin-right: 8px; } }
+
+.overview-basis .header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0; }
+  .overview-basis .header div {
+    margin-bottom: 8px; }
+    .overview-basis .header div h1 {
+      color: #343a3f;
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: bold;
+      text-align: center; }
+  .overview-basis .header p {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #343a3f;
+    margin: 0;
+    text-align: center; }
+
+.overview-basis form {
+  padding-bottom: 12px; }
+  .overview-basis form > div {
+    margin-bottom: 12px; }
+    .overview-basis form > div label {
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      font-size: 10px;
+      line-height: 1.6;
+      color: #697077;
+      font-weight: bold; }
+      .overview-basis form > div label input {
+        width: 100%;
+        position: relative;
+        border: 1px solid #a2a9b0;
+        border-radius: 4px;
+        background: transparent;
+        box-sizing: border-box;
+        height: 32px;
+        box-shadow: none;
+        padding-left: 32px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #343a3f;
+        margin-top: 4px;
+        padding: 0 8px;
+        background: #f2f4f8;
+        border-color: #dde1e6; }
+      .overview-basis form > div label a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        text-transform: none;
+        text-decoration: none;
+        color: #1f46ed;
+        font-weight: normal;
+        right: 9px;
+        bottom: 9px; }
+        .overview-basis form > div label a span {
+          margin-right: 2px; }
+        .overview-basis form > div label a.copy-text {
+          bottom: 8px; }
+
+.overview-basis .qr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px; }
+  .overview-basis .qr div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+  .overview-basis .qr div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #343a3f;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.3; }
+    .overview-basis .qr div:nth-child(2) p {
+      margin: 0;
+      margin-bottom: 8px; }
+    .overview-basis .qr div:nth-child(2) a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-transform: none;
+      text-decoration: none;
+      color: #1f46ed; }
+      .overview-basis .qr div:nth-child(2) a svg {
+        margin-right: 6px; }
+
+.overview-basis .bill {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #343a3f; }
+  .overview-basis .bill p {
+    margin: 0;
+    margin-bottom: 8px; }
+  .overview-basis .bill div {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    max-width: 210px; }
+    .overview-basis .bill div a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-transform: none;
+      text-decoration: none;
+      color: #1f46ed; }
+      .overview-basis .bill div a svg {
+        margin-right: 6px; }
 
 .pay-methods svg rect {
   transition: all 0.3s; }
@@ -450,3 +598,168 @@ main {
       top: 50%;
       margin-top: -25%;
       margin-left: 0; } }
+
+.pay-with-card .back a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #697077;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  text-decoration: none; }
+  .pay-with-card .back a :hover {
+    text-decoration: underline; }
+  .pay-with-card .back a svg {
+    margin-right: 4px; }
+  @media (min-width: 768px) {
+    .pay-with-card .back a {
+      font-size: 14px; }
+      .pay-with-card .back a svg {
+        margin-right: 8px; } }
+
+.pay-with-card .header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+  .pay-with-card .header div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center; }
+    .pay-with-card .header div svg:nth-child(1) {
+      margin-right: 6px; }
+    .pay-with-card .header div svg:nth-child(2) {
+      margin-left: 6px; }
+  .pay-with-card .header h1 {
+    color: #343a3f;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: center; }
+  @media (min-width: 768px) {
+    .pay-with-card .header {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-around;
+      width: 350px;
+      margin-top: 35px;
+      margin-bottom: 40px; }
+      .pay-with-card .header div {
+        margin: 0; }
+      .pay-with-card .header h1 {
+        font-size: 36px;
+        line-height: 1.3; } }
+
+.pay-with-card form div {
+  margin-bottom: 12px; }
+  .pay-with-card form div label {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #697077;
+    font-weight: bold; }
+    .pay-with-card form div label span .required {
+      color: #eb5757; }
+    .pay-with-card form div label::before {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 32px;
+      margin: 0 10px; }
+    .pay-with-card form div label input {
+      width: 100%;
+      position: relative;
+      border: 1px solid #a2a9b0;
+      border-radius: 4px;
+      background: transparent;
+      box-sizing: border-box;
+      height: 32px;
+      box-shadow: none;
+      padding-left: 32px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #343a3f;
+      margin-top: 4px; }
+      .pay-with-card form div label input::placeholder {
+        font-weight: normal;
+        color: #a2a9b0; }
+      .pay-with-card form div label input:focus-visible {
+        border-color: #1f46ed;
+        outline: 3px solid rgba(31, 70, 237, 0.2); }
+  .pay-with-card form div:nth-child(1) label::before {
+    content: url("~@/assets/svg/Person.svg"); }
+  .pay-with-card form div:nth-child(2) label::before {
+    content: url("~@/assets/svg/Card.svg"); }
+  .pay-with-card form div:nth-child(3) {
+    display: flex;
+    flex-direction: row; }
+    .pay-with-card form div:nth-child(3) div {
+      margin-bottom: 0; }
+      .pay-with-card form div:nth-child(3) div:nth-child(1) {
+        width: 50%;
+        margin-right: 4px; }
+        .pay-with-card form div:nth-child(3) div:nth-child(1) label::before {
+          content: url("~@/assets/svg/Calendar.svg"); }
+      .pay-with-card form div:nth-child(3) div:nth-child(2) {
+        width: 50%;
+        margin-left: 4px; }
+        .pay-with-card form div:nth-child(3) div:nth-child(2) label::before {
+          content: url("~@/assets/svg/Lock.svg"); }
+  .pay-with-card form div:nth-child(4) label::before {
+    content: url("~@/assets/svg/Email.svg"); }
+
+.pay-with-card form button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: #1f46ed;
+  color: #fff;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 600; }
+
+@media (min-width: 768px) {
+  .pay-with-card form div {
+    margin-bottom: 24px; }
+    .pay-with-card form div label {
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0.1em; }
+      .pay-with-card form div label input {
+        height: 48px;
+        padding-left: 48px;
+        font-size: 16px;
+        margin-top: 8px; }
+      .pay-with-card form div label::before {
+        height: 48px;
+        margin: 0 18px; }
+    .pay-with-card form div:nth-child(1) label::before {
+      content: url("~@/assets/svg/desktop/Person_lg.svg"); }
+    .pay-with-card form div:nth-child(2) label::before {
+      content: url("~@/assets/svg/desktop/Card_lg.svg"); }
+    .pay-with-card form div:nth-child(3) div:nth-child(1) {
+      margin-right: 10px; }
+      .pay-with-card form div:nth-child(3) div:nth-child(1) label::before {
+        content: url("~@/assets/svg/desktop/Calendar_lg.svg"); }
+    .pay-with-card form div:nth-child(3) div:nth-child(2) {
+      margin-left: 10px; }
+      .pay-with-card form div:nth-child(3) div:nth-child(2) label::before {
+        content: url("~@/assets/svg/desktop/Lock_lg.svg"); }
+    .pay-with-card form div:nth-child(4) label::before {
+      content: url("~@/assets/svg/desktop/Email_lg.svg"); }
+  .pay-with-card form button {
+    height: 60px;
+    font-size: 20px;
+    line-height: 1.4; } }

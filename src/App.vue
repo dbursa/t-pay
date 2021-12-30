@@ -18,7 +18,22 @@
 			</nav>
 
 			<div :class="['main-table', { 'detail-payment': this.isInfo }]">
-				<pay-method :desktop-version="this.tabletSize" />
+				<pay-method
+					:desktop-version="this.tabletSize"
+					v-if="!payWithCardSelected && !payWithInternetBankingSelected"
+					@showPayWithCard="payWithCardScreen"
+					@showPayWithInternetBanking="payWithInternetBankingScreen"
+				/>
+				<pay-with-card
+					v-if="payWithCardSelected"
+					:desktop-version="this.tabletSize"
+					@showHomePage="homePage"
+				/>
+				<pay-other-method
+					v-if="payWithInternetBankingSelected"
+					:desktop-version="this.tabletSize"
+					@showHomePage="homePage"
+				/>
 				<payment-info v-if="isInfo" />
 			</div>
 
@@ -39,6 +54,8 @@ export default {
 			isInfo: false,
 			tabletSize: false,
 			windowWidth: window.innerWidth,
+			payWithCardSelected: false,
+			payWithInternetBankingSelected: false,
 		};
 	},
 
@@ -51,6 +68,19 @@ export default {
 	methods: {
 		showInfo() {
 			this.isInfo = !this.isInfo;
+		},
+
+		payWithCardScreen() {
+			this.payWithCardSelected = true;
+		},
+
+		payWithInternetBankingScreen() {
+			this.payWithInternetBankingSelected = true;
+		},
+
+		homePage() {
+			this.payWithCardSelected = false;
+			this.payWithInternetBankingSelected = false;
 		},
 	},
 

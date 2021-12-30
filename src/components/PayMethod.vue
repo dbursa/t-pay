@@ -4,7 +4,7 @@
 			<h2>Platební karta</h2>
 
 			<div>
-				<a href="#" class="btn">
+				<a @click="payWithCard()" class="btn">
 					<div>Platba kartou</div>
 					<div class="options">
 						<visa />
@@ -39,7 +39,7 @@
 				<button>
 					<kb :desktop-version="desktopVersion" />
 				</button>
-				<button>
+				<button @click="payWithInternetBanking()">
 					<csob :desktop-version="desktopVersion" />
 				</button>
 			</div>
@@ -92,6 +92,16 @@ export default {
 		desktopVersion: {
 			type: Boolean,
 			default: false,
+		},
+	},
+
+	methods: {
+		payWithCard() {
+			this.$emit('showPayWithCard');
+		},
+
+		payWithInternetBanking() {
+			this.$emit('showPayWithInternetBanking');
 		},
 	},
 };
