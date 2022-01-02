@@ -2,6 +2,7 @@ import PayMethod from './components/PayMethod.vue'
 import PaymentInfo from './components/PaymentInfo.vue'
 import PayWithCard from './components/PayWithCard.vue'
 import PayOtherMethod from './components/PayOtherMethod.vue'
+import PayWithInternetBanking from './components/PayWithInternetBanking.vue'
 
 import Dropdown from './components/Dropdown.vue'
 import ArrowDown from './components/icons/ArrowDown.vue'
@@ -49,6 +50,7 @@ Vue.component('pay-method', PayMethod)
 Vue.component('pay-with-card', PayWithCard)
 Vue.component('payment-info', PaymentInfo)
 Vue.component('pay-other-method', PayOtherMethod)
+Vue.component('pay-with-internet-banking', PayWithInternetBanking)
 Vue.component('dropdown', Dropdown)
 Vue.component('close', Close)
 Vue.component('world', World)

@@ -382,7 +382,7 @@ main {
       .overview-basis .group .text-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center; }
+        align-self: center; }
       .overview-basis .group div.qr-img {
         justify-content: flex-start;
         margin-bottom: 0;
@@ -397,6 +397,8 @@ main {
         margin-bottom: 20px; }
         .overview-basis .group div.qr-text a {
           display: none; }
+        .overview-basis .group div.qr-text p {
+          margin: 0; }
       .overview-basis .group .bill {
         font-size: 14px;
         line-height: 1.4;
@@ -404,7 +406,11 @@ main {
         margin: 0; }
         .overview-basis .group .bill div {
           margin: 0;
-          max-width: auto; } }
+          max-width: max-content; }
+          .overview-basis .group .bill div a:first-child {
+            margin-right: 12px; }
+          .overview-basis .group .bill div a svg {
+            margin-right: 8px; } }
 
 .pay-methods svg rect {
   transition: all 0.3s; }
@@ -678,6 +684,22 @@ main {
       top: 50%;
       margin-top: -25%;
       margin-left: 0; } }
+
+.pay-other-method form {
+  margin-bottom: 147px; }
+  .pay-other-method form .specific-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px; }
+    .pay-other-method form .specific-info svg path {
+      fill: #697077; }
+    .pay-other-method form .specific-info p {
+      font-size: 12px;
+      line-height: 1;
+      margin: 0;
+      margin-left: 4px;
+      color: #697077; }
 
 .pay-with-card .back a {
   display: flex;

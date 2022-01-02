@@ -1,5 +1,5 @@
 <template>
-	<div class="overview-basis pay-other-method">
+	<div class="overview-basis pay-with-internet-banking">
 		<div class="back">
 			<a href="#" @click="back()">
 				<arrow-back v-if="!desktopVersion" />
@@ -14,8 +14,8 @@
 			</div>
 
 			<p>
-				Použijte platební údaje níže pro zadání platby. Částka může být připsána
-				až další pracovní den.
+				Přihlašte se do svého internetového bankovnictví a přepište/zkopírujte
+				údaje do platebního příkazu.
 			</p>
 		</div>
 
@@ -46,10 +46,6 @@
 						<copy-lg v-else />
 					</a>
 				</label>
-				<div class="specific-info">
-					<info />
-					<p>Částku prosím zadejte přesně</p>
-				</div>
 			</div>
 
 			<div>
@@ -61,6 +57,11 @@
 						<copy-lg v-else />
 					</a>
 				</label>
+			</div>
+
+			<div class="btns">
+				<button>Přejít do Bankovnictví</button>
+				<button>Přejít do Business Bankovnictví</button>
 			</div>
 		</form>
 
@@ -106,7 +107,7 @@
 </template>
 <script>
 export default {
-	name: 'PayOtherMethod',
+	name: 'PayWithInternetBanking',
 
 	props: {
 		desktopVersion: {

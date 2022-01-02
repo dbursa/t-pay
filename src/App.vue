@@ -20,8 +20,13 @@
 			<div :class="['main-table', { 'detail-payment': this.isInfo }]">
 				<pay-method
 					:desktop-version="this.tabletSize"
-					v-if="!payWithCardSelected && !payWithInternetBankingSelected"
+					v-if="
+						!payWithCardSelected &&
+						!payWithOtherBank &&
+						!payWithInternetBankingSelected
+					"
 					@showPayWithCard="payWithCardScreen"
+					@showPayWithOtherBank="payWithOtherBankScreen"
 					@showPayWithInternetBanking="payWithInternetBankingScreen"
 				/>
 				<pay-with-card
@@ -30,6 +35,11 @@
 					@showHomePage="homePage"
 				/>
 				<pay-other-method
+					v-if="payWithOtherBank"
+					:desktop-version="this.tabletSize"
+					@showHomePage="homePage"
+				/>
+				<pay-with-internet-banking
 					v-if="payWithInternetBankingSelected"
 					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
@@ -56,6 +66,7 @@ export default {
 			windowWidth: window.innerWidth,
 			payWithCardSelected: false,
 			payWithInternetBankingSelected: false,
+			payWithOtherBank: false,
 		};
 	},
 
@@ -74,12 +85,17 @@ export default {
 			this.payWithCardSelected = true;
 		},
 
+		payWithOtherBankScreen() {
+			this.payWithOtherBank = true;
+		},
+
 		payWithInternetBankingScreen() {
 			this.payWithInternetBankingSelected = true;
 		},
 
 		homePage() {
 			this.payWithCardSelected = false;
+			this.payWithOtherBank = false;
 			this.payWithInternetBankingSelected = false;
 		},
 	},

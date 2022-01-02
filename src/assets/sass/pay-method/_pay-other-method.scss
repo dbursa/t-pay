@@ -1,2 +1,26 @@
 .pay-other-method {
+	&.overview-basis {
+		form {
+			margin-bottom: 147px;
+			.specific-info {
+				@include row;
+				align-items: center;
+				margin-top: 8px;
+
+				svg {
+					path {
+						fill: $h2-color;
+					}
+				}
+
+				p {
+					font-size: 12px;
+					line-height: 1;
+					margin: 0;
+					margin-left: 4px;
+					color: $h2-color;
+				}
+			}
+		}
+	}
 }

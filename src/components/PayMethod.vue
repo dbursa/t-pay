@@ -72,7 +72,7 @@
 			<h2>Ostatní</h2>
 
 			<div>
-				<button>
+				<button @click="payWithOtherBank()">
 					<other-bank v-if="desktopVersion" />
 					<div>Jiná banka</div>
 				</button>
@@ -98,6 +98,10 @@ export default {
 	methods: {
 		payWithCard() {
 			this.$emit('showPayWithCard');
+		},
+
+		payWithOtherBank() {
+			this.$emit('showPayWithOtherBank');
 		},
 
 		payWithInternetBanking() {
