@@ -3,6 +3,10 @@ import PaymentInfo from './components/PaymentInfo.vue'
 import PayWithCard from './components/PayWithCard.vue'
 import PayOtherMethod from './components/PayOtherMethod.vue'
 import PayWithInternetBanking from './components/PayWithInternetBanking.vue'
+import Loading from './components/Loading.vue'
+import WaitingForPayment from './components/WaitingForPayment.vue'
+import PaymentFailed from './components/PaymentFailed.vue'
+
 
 import Dropdown from './components/Dropdown.vue'
 import ArrowDown from './components/icons/ArrowDown.vue'
@@ -15,6 +19,7 @@ import Copy from './components/icons/Copy.vue'
 import Email from './components/icons/Email.vue'
 import Print from './components/icons/Print.vue'
 import Save from './components/icons/Save.vue'
+import ExternalLink from './components/icons/ExternalLink.vue'
 
 //desktop svg
 import ArrowBackLg from './components/icons/desktop/ArrowBackLg.vue'
@@ -51,6 +56,9 @@ Vue.component('pay-with-card', PayWithCard)
 Vue.component('payment-info', PaymentInfo)
 Vue.component('pay-other-method', PayOtherMethod)
 Vue.component('pay-with-internet-banking', PayWithInternetBanking)
+Vue.component('loading', Loading)
+Vue.component('waiting-for-payment', WaitingForPayment)
+Vue.component('payment-failed', PaymentFailed)
 Vue.component('dropdown', Dropdown)
 Vue.component('close', Close)
 Vue.component('world', World)
@@ -80,8 +88,7 @@ Vue.component('copy', Copy)
 Vue.component('email', Email)
 Vue.component('print', Print)
 Vue.component('save', Save)
-
-
+Vue.component('external-link', ExternalLink)
 
 //desktop
 Vue.component('visa-header-lg', VisaHeaderLg)

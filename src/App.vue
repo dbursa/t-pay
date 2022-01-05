@@ -23,11 +23,13 @@
 					v-if="
 						!payWithCardSelected &&
 						!payWithOtherBank &&
-						!payWithInternetBankingSelected
+						!payWithInternetBankingSelected &&
+						!loadingSelected
 					"
 					@showPayWithCard="payWithCardScreen"
 					@showPayWithOtherBank="payWithOtherBankScreen"
 					@showPayWithInternetBanking="payWithInternetBankingScreen"
+					@showLoading="loadingScreen"
 				/>
 				<pay-with-card
 					v-if="payWithCardSelected"
@@ -44,6 +46,7 @@
 					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
 				/>
+				<loading v-if="loadingSelected" @showHomePage="homePage" />
 				<payment-info v-if="isInfo" />
 			</div>
 
@@ -67,6 +70,7 @@ export default {
 			payWithCardSelected: false,
 			payWithInternetBankingSelected: false,
 			payWithOtherBank: false,
+			loadingSelected: false,
 		};
 	},
 
@@ -93,10 +97,15 @@ export default {
 			this.payWithInternetBankingSelected = true;
 		},
 
+		loadingScreen() {
+			this.loadingSelected = true;
+		},
+
 		homePage() {
 			this.payWithCardSelected = false;
 			this.payWithOtherBank = false;
 			this.payWithInternetBankingSelected = false;
+			this.loadingSelected = false;
 		},
 	},
 

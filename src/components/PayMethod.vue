@@ -11,7 +11,7 @@
 						<master-card />
 					</div>
 				</a>
-				<a href="#" class="btn">
+				<a href="#" class="btn" @click="loading()">
 					<div>Zaplatit přes</div>
 					<apple-pay />
 				</a>
@@ -98,6 +98,10 @@ export default {
 	methods: {
 		payWithCard() {
 			this.$emit('showPayWithCard');
+		},
+
+		loading() {
+			this.$emit('showLoading');
 		},
 
 		payWithOtherBank() {

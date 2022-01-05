@@ -89,3 +89,45 @@
 	font-size: 20px;
 	line-height: 1.4;
 }
+
+@mixin btn-sm {
+	@include row;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 100%;
+	font-size: 12px;
+	line-height: 2.3;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border-radius: $border-radius;
+	border: 1px solid $btn-primary;
+	background: $btn-primary;
+
+	span {
+		margin-right: 6px;
+	}
+}
+
+@mixin btn-sm-desktop {
+	height: 46px;
+	font-size: 16px;
+	line-height: 1.4;
+
+	span {
+		margin-right: 12px;
+	}
+}
+
+@mixin btn-sm-reverse {
+	color: $btn-primary;
+	background: transparent;
+	border-color: $main-color;
+
+	svg {
+		path {
+			fill: $btn-primary;
+		}
+	}
+}

@@ -1,2 +1,70 @@
 .pay-with-internet-banking {
+	&.overview-basis {
+		.header {
+			div {
+				@include col;
+				justify-content: center;
+
+				.csob {
+					@include mx-auto;
+					height: 20px;
+					margin-bottom: 8px;
+				}
+
+				.csob-lg {
+					display: none;
+				}
+
+				@media (min-width: $tablet) {
+					@include row;
+
+					.csob {
+						display: none;
+					}
+
+					.csob-lg {
+						display: block;
+						margin-right: 10px;
+					}
+
+					h1 {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+
+		form {
+			margin-bottom: 24px;
+			padding-bottom: 0;
+			.btns {
+				@include col;
+				margin-top: 20px;
+
+				a {
+					@include btn-sm;
+
+					span {
+						margin-right: 6px;
+					}
+
+					&:nth-child(2) {
+						@include btn-sm-reverse;
+						margin-top: 8px;
+					}
+				}
+			}
+
+			@media (min-width: $tablet) {
+				margin-bottom: 40px;
+				.btns {
+					margin-top: 28px;
+
+					a {
+						@include btn-sm-desktop;
+					}
+				}
+			}
+		}
+	}
 }
