@@ -24,29 +24,48 @@
 						!payWithCardSelected &&
 						!payWithOtherBank &&
 						!payWithInternetBankingSelected &&
-						!loadingSelected
+						!loadingSelected &&
+						!paymentFailedSelected &&
+						!waitingForPaymentSelected
 					"
 					@showPayWithCard="payWithCardScreen"
 					@showPayWithOtherBank="payWithOtherBankScreen"
 					@showPayWithInternetBanking="payWithInternetBankingScreen"
 					@showLoading="loadingScreen"
+					@showPaymentFailed="paymentFailedScreen"
+					@showWaitingForPayment="waitingForPaymentScreen"
 				/>
+
 				<pay-with-card
 					v-if="payWithCardSelected"
 					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
 				/>
+
 				<pay-other-method
 					v-if="payWithOtherBank"
 					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
 				/>
+
 				<pay-with-internet-banking
 					v-if="payWithInternetBankingSelected"
 					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
 				/>
+
 				<loading v-if="loadingSelected" @showHomePage="homePage" />
+
+				<payment-failed
+					v-if="paymentFailedSelected"
+					@showHomePage="homePage"
+					:desktop-version="this.tabletSize"
+				/>
+				<waiting-for-payment
+					v-if="waitingForPaymentSelected"
+					@showHomePage="homePage"
+				/>
+
 				<payment-info v-if="isInfo" />
 			</div>
 
@@ -71,6 +90,8 @@ export default {
 			payWithInternetBankingSelected: false,
 			payWithOtherBank: false,
 			loadingSelected: false,
+			paymentFailedSelected: false,
+			waitingForPaymentSelected: false,
 		};
 	},
 
@@ -101,11 +122,20 @@ export default {
 			this.loadingSelected = true;
 		},
 
+		paymentFailedScreen() {
+			this.paymentFailedSelected = true;
+		},
+		waitingForPaymentScreen() {
+			this.waitingForPaymentSelected = true;
+		},
+
 		homePage() {
 			this.payWithCardSelected = false;
 			this.payWithOtherBank = false;
 			this.payWithInternetBankingSelected = false;
 			this.loadingSelected = false;
+			this.paymentFailedSelected = false;
+			this.waitingForPaymentSelected = false;
 		},
 	},
 

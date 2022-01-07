@@ -15,7 +15,12 @@
 					<div>Zaplatit přes</div>
 					<apple-pay />
 				</a>
-				<a href="#" class="btn">
+				<a
+					href="#"
+					class="btn"
+					@click="paymentFailed()"
+					:desktop-version="desktopVersion"
+				>
 					<div>Zaplatit přes</div>
 					<google-pay />
 				</a>
@@ -24,7 +29,7 @@
 		<div class="deffered">
 			<h2>Odložená platba</h2>
 			<div>
-				<button>
+				<button @click="waitingForPayment()">
 					<platim-pak :desktop-version="desktopVersion" />
 				</button>
 			</div>
@@ -102,6 +107,13 @@ export default {
 
 		loading() {
 			this.$emit('showLoading');
+		},
+
+		paymentFailed() {
+			this.$emit('showPaymentFailed');
+		},
+		waitingForPayment() {
+			this.$emit('showWaitingForPayment');
 		},
 
 		payWithOtherBank() {

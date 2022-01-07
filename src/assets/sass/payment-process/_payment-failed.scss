@@ -1,0 +1,135 @@
+.payment-failed {
+	margin-top: 53px;
+	margin-bottom: 61px;
+
+	@media (min-width: $tablet) {
+		margin-top: 70px;
+		margin-bottom: 0;
+	}
+
+	.header {
+		@include col;
+		text-align: center;
+		margin-bottom: 12px;
+
+		svg {
+			@include mx-auto;
+			margin-bottom: 24px;
+		}
+
+		h1 {
+			font-size: 20px;
+			line-height: 1.4;
+			font-weight: bold;
+			color: $main-background;
+			margin-bottom: 4px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.4;
+			color: $h2-color;
+			margin: 0;
+		}
+
+		@media (min-width: $tablet) {
+			margin-bottom: 40px;
+
+			svg {
+				margin-bottom: 40px;
+			}
+
+			h1 {
+				font-size: 32px;
+				line-height: 1.25;
+				margin-bottom: 12px;
+			}
+
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.list {
+		margin-bottom: 36px;
+
+		p {
+			font-size: 12px;
+			line-height: 2.3;
+			font-weight: bold;
+			color: $main-background;
+			text-align: center;
+			margin: 0;
+			margin-bottom: 4px;
+		}
+
+		ul {
+			margin: 0;
+
+			li {
+				list-style: none;
+				position: relative;
+				font-size: 12px;
+				line-height: 1.4;
+				color: $main-background;
+				margin-bottom: 12px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				svg {
+					position: absolute;
+					left: -20px;
+				}
+			}
+		}
+
+		@media (min-width: $tablet) {
+			margin-bottom: 112px;
+
+			p {
+				font-size: 16px;
+				line-height: 1.75;
+				margin-bottom: 12px;
+			}
+
+			ul {
+				max-width: 325px;
+				@include mx-auto;
+
+				li {
+					font-size: 16px;
+					line-height: 1.25;
+					margin-bottom: 16px;
+
+					svg {
+						height: 20px;
+						width: 20px;
+						left: -32px;
+					}
+				}
+			}
+		}
+	}
+
+	.btns {
+		button {
+			@include btn-sm;
+
+			&:nth-child(2) {
+				@include btn-sm-reverse;
+				margin-top: 8px;
+			}
+
+			@media (min-width: $tablet) {
+				@include btn-sm-desktop;
+
+				&:nth-child(2) {
+					margin-top: 12px;
+				}
+			}
+		}
+	}
+}
