@@ -29,6 +29,7 @@
 				margin-bottom: 8px;
 				justify-content: center;
 				align-items: center;
+				cursor: pointer;
 
 				div {
 					margin-right: 10px;
@@ -350,17 +351,13 @@
 									#ed1c24 80.45%
 								);
 								border-radius: $border-radius;
-								transition: 0.3s;
+								@include trans;
 								opacity: 0;
 							}
 
 							svg {
 								position: relative;
 								z-index: 1;
-
-								path {
-									pointer-events: all;
-								}
 							}
 
 							&:hover {

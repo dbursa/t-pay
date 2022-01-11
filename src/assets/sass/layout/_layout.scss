@@ -212,6 +212,11 @@ main {
 					font-size: 14px;
 					line-height: 1.1;
 					padding: 6px;
+					@include trans;
+
+					&:hover {
+						background: $main-border;
+					}
 				}
 			}
 		}
@@ -248,8 +253,8 @@ main {
 		@include row;
 		width: 100%;
 		justify-content: center;
-		bottom: 0;
 		margin-top: 12px;
+		padding-bottom: 32px;
 
 		p {
 			display: flex;
@@ -261,6 +266,9 @@ main {
 		}
 
 		@media (min-width: $tablet) {
+			margin-top: 144px;
+			padding-bottom: 28px;
+
 			p {
 				font-size: 13px;
 			}

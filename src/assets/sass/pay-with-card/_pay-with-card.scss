@@ -111,7 +111,8 @@
 					}
 
 					&:focus-visible {
-						@include focus-input;
+						outline: none;
+						border: 2px solid $visa-mastercard-color;
 					}
 				}
 			}
@@ -121,6 +122,12 @@
 					&::before {
 						content: url('~@/assets/svg/Person.svg');
 					}
+
+					&:focus-within {
+						&::before {
+							content: url('~@/assets/svg/Person-active.svg');
+						}
+					}
 				}
 			}
 
@@ -128,6 +135,31 @@
 				label {
 					&::before {
 						content: url('~@/assets/svg/Card.svg');
+					}
+
+					&:focus-within {
+						&::before {
+							content: url('~@/assets/svg/Card-active.svg');
+						}
+					}
+
+					&.mastercard {
+						svg {
+							position: absolute;
+							width: 20.6px;
+							height: 16px;
+							right: 9px;
+							bottom: 9px;
+						}
+					}
+
+					&.visa {
+						svg {
+							position: absolute;
+							width: 20.6px;
+							right: 9px;
+							bottom: 9px;
+						}
 					}
 				}
 			}
@@ -145,6 +177,12 @@
 							&::before {
 								content: url('~@/assets/svg/Calendar.svg');
 							}
+
+							&:focus-within {
+								&::before {
+									content: url('~@/assets/svg/Calendar-active.svg');
+								}
+							}
 						}
 					}
 					&:nth-child(2) {
@@ -153,6 +191,12 @@
 						label {
 							&::before {
 								content: url('~@/assets/svg/Lock.svg');
+							}
+
+							&:focus-within {
+								&::before {
+									content: url('~@/assets/svg/Lock-active.svg');
+								}
 							}
 						}
 					}
@@ -163,6 +207,12 @@
 				label {
 					&::before {
 						content: url('~@/assets/svg/Email.svg');
+					}
+
+					&:focus-within {
+						&::before {
+							content: url('~@/assets/svg/Email-active.svg');
+						}
 					}
 				}
 			}
@@ -183,6 +233,10 @@
 
 					input {
 						@include form-input-desktop;
+
+						&:focus-visible {
+							@include focus-input;
+						}
 					}
 
 					&::before {
@@ -196,6 +250,12 @@
 						&::before {
 							content: url('~@/assets/svg/desktop/Person_lg.svg');
 						}
+
+						&:focus-within {
+							&::before {
+								content: url('~@/assets/svg/desktop/Person-active_lg.svg');
+							}
+						}
 					}
 				}
 
@@ -203,6 +263,29 @@
 					label {
 						&::before {
 							content: url('~@/assets/svg/desktop/Card_lg.svg');
+						}
+
+						&:focus-within {
+							&::before {
+								content: url('~@/assets/svg/desktop/Card-active_lg.svg');
+							}
+						}
+
+						&.mastercard {
+							svg {
+								width: 40px;
+								height: 31px;
+								right: 20px;
+								bottom: 10px;
+							}
+						}
+
+						&.visa {
+							svg {
+								width: 40px;
+								right: 20px;
+								bottom: 9px;
+							}
 						}
 					}
 				}
@@ -215,6 +298,12 @@
 								&::before {
 									content: url('~@/assets/svg/desktop/Calendar_lg.svg');
 								}
+
+								&:focus-within {
+									&::before {
+										content: url('~@/assets/svg/desktop/Calendar-active_lg.svg');
+									}
+								}
 							}
 						}
 						&:nth-child(2) {
@@ -222,6 +311,12 @@
 							label {
 								&::before {
 									content: url('~@/assets/svg/desktop/Lock_lg.svg');
+								}
+
+								&:focus-within {
+									&::before {
+										content: url('~@/assets/svg/desktop/Lock-active_lg.svg');
+									}
 								}
 							}
 						}
@@ -232,6 +327,12 @@
 					label {
 						&::before {
 							content: url('~@/assets/svg/desktop/Email_lg.svg');
+						}
+
+						&:focus-within {
+							&::before {
+								content: url('~@/assets/svg/desktop/Email-active_lg.svg');
+							}
 						}
 					}
 				}

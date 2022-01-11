@@ -143,6 +143,10 @@
 					input {
 						@include form-input-desktop;
 						padding: 0 12px;
+
+						&:read-only {
+							pointer-events: none;
+						}
 					}
 
 					a {
@@ -188,6 +192,10 @@
 				p {
 					margin: 0;
 					margin-bottom: 8px;
+
+					&.desktop {
+						display: none;
+					}
 				}
 
 				a {
@@ -270,6 +278,14 @@
 
 					p {
 						margin: 0;
+
+						&.mob {
+							display: none;
+						}
+
+						&.desktop {
+							display: block;
+						}
 					}
 				}
 			}

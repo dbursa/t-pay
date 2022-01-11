@@ -55,7 +55,7 @@
 }
 
 @mixin focus-input {
-	border-color: $btn-primary;
+	border: 1px solid $btn-primary;
 	outline: 3px solid rgba(31, 70, 237, 0.2);
 }
 

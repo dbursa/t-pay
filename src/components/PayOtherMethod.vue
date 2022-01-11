@@ -71,9 +71,14 @@
 
 			<div class="text-wrapper">
 				<div class="qr-text">
-					<p>
+					<p class="mob">
 						Uložte si QR kód a následně jej nahrejte do mobilní aplikace vaší
 						banky pro rychlejší a bezchybné zadání platby.
+					</p>
+
+					<p class="desktop">
+						Naskenujte QR kód přes mobilní aplikaci vaší banky pro rychlejší a
+						bezchybné zadání platby.
 					</p>
 
 					<a href="">

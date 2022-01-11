@@ -151,7 +151,10 @@ main {
           main .dropdown > div a {
             font-size: 14px;
             line-height: 1.1;
-            padding: 6px; } }
+            padding: 6px;
+            transition: all 0.3s; }
+            main .dropdown > div a:hover {
+              background: #4d5358; } }
   main .main-table {
     width: 272px;
     border-radius: 4px;
@@ -176,8 +179,8 @@ main {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    bottom: 0;
-    margin-top: 12px; }
+    margin-top: 12px;
+    padding-bottom: 32px; }
     main footer p {
       display: flex;
       align-items: center;
@@ -186,8 +189,11 @@ main {
       margin-right: 9px;
       color: #878d96; }
     @media (min-width: 768px) {
-      main footer p {
-        font-size: 13px; } }
+      main footer {
+        margin-top: 144px;
+        padding-bottom: 28px; }
+        main footer p {
+          font-size: 13px; } }
 
 .overview-basis .back a {
   display: flex;
@@ -310,6 +316,8 @@ main {
             font-size: 16px;
             margin-top: 8px;
             padding: 0 12px; }
+            .overview-basis form > div label input:read-only {
+              pointer-events: none; }
           .overview-basis form > div label a {
             right: 13px;
             bottom: 15px; }
@@ -339,6 +347,8 @@ main {
     .overview-basis .group div.qr-text p {
       margin: 0;
       margin-bottom: 8px; }
+      .overview-basis .group div.qr-text p.desktop {
+        display: none; }
     .overview-basis .group div.qr-text a {
       display: flex;
       flex-direction: row;
@@ -399,6 +409,10 @@ main {
           display: none; }
         .overview-basis .group div.qr-text p {
           margin: 0; }
+          .overview-basis .group div.qr-text p.mob {
+            display: none; }
+          .overview-basis .group div.qr-text p.desktop {
+            display: block; }
       .overview-basis .group .bill {
         font-size: 14px;
         line-height: 1.4;
@@ -438,7 +452,8 @@ main {
     text-decoration: none;
     margin-bottom: 8px;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     .pay-methods > div a.btn div {
       margin-right: 10px; }
     .pay-methods > div a.btn:first-child {
@@ -582,13 +597,11 @@ main {
             bottom: 0;
             background: linear-gradient(49.02deg, #140757 25.15%, #270953 28.78%, #6d1042 42.91%, #a41535 55.65%, #cc192c 66.54%, #e41b26 75.16%, #ed1c24 80.45%);
             border-radius: 4px;
-            transition: 0.3s;
+            transition: all 0.3s;
             opacity: 0; }
           .pay-methods .internet-banking div.third-row button:nth-child(2) svg {
             position: relative;
             z-index: 1; }
-            .pay-methods .internet-banking div.third-row button:nth-child(2) svg path {
-              pointer-events: all; }
           .pay-methods .internet-banking div.third-row button:nth-child(2):hover::before {
             opacity: 1; }
           .pay-methods .internet-banking div.third-row button:nth-child(2):hover svg path {
@@ -652,7 +665,8 @@ main {
     .payment-info .dealer a {
       color: #fff;
       font-size: 14px;
-      line-height: 1.4; }
+      line-height: 1.4;
+      font-weight: 300; }
   @media (min-width: 768px) {
     .payment-info {
       margin-left: -40px;
@@ -865,12 +879,27 @@ main {
         font-weight: normal;
         color: #a2a9b0; }
       .pay-with-card form div label input:focus-visible {
-        border-color: #1f46ed;
-        outline: 3px solid rgba(31, 70, 237, 0.2); }
+        outline: none;
+        border: 2px solid #1f46ed; }
   .pay-with-card form div:nth-child(1) label::before {
     content: url("~@/assets/svg/Person.svg"); }
+  .pay-with-card form div:nth-child(1) label:focus-within::before {
+    content: url("~@/assets/svg/Person-active.svg"); }
   .pay-with-card form div:nth-child(2) label::before {
     content: url("~@/assets/svg/Card.svg"); }
+  .pay-with-card form div:nth-child(2) label:focus-within::before {
+    content: url("~@/assets/svg/Card-active.svg"); }
+  .pay-with-card form div:nth-child(2) label.mastercard svg {
+    position: absolute;
+    width: 20.6px;
+    height: 16px;
+    right: 9px;
+    bottom: 9px; }
+  .pay-with-card form div:nth-child(2) label.visa svg {
+    position: absolute;
+    width: 20.6px;
+    right: 9px;
+    bottom: 9px; }
   .pay-with-card form div:nth-child(3) {
     display: flex;
     flex-direction: row; }
@@ -881,13 +910,19 @@ main {
         margin-right: 4px; }
         .pay-with-card form div:nth-child(3) div:nth-child(1) label::before {
           content: url("~@/assets/svg/Calendar.svg"); }
+        .pay-with-card form div:nth-child(3) div:nth-child(1) label:focus-within::before {
+          content: url("~@/assets/svg/Calendar-active.svg"); }
       .pay-with-card form div:nth-child(3) div:nth-child(2) {
         width: 50%;
         margin-left: 4px; }
         .pay-with-card form div:nth-child(3) div:nth-child(2) label::before {
           content: url("~@/assets/svg/Lock.svg"); }
+        .pay-with-card form div:nth-child(3) div:nth-child(2) label:focus-within::before {
+          content: url("~@/assets/svg/Lock-active.svg"); }
   .pay-with-card form div:nth-child(4) label::before {
     content: url("~@/assets/svg/Email.svg"); }
+  .pay-with-card form div:nth-child(4) label:focus-within::before {
+    content: url("~@/assets/svg/Email-active.svg"); }
 
 .pay-with-card form button {
   width: 100%;
@@ -912,31 +947,53 @@ main {
         padding-left: 48px;
         font-size: 16px;
         margin-top: 8px; }
+        .pay-with-card form div label input:focus-visible {
+          border: 1px solid #1f46ed;
+          outline: 3px solid rgba(31, 70, 237, 0.2); }
       .pay-with-card form div label::before {
         height: 48px;
         margin: 0 18px; }
     .pay-with-card form div:nth-child(1) label::before {
       content: url("~@/assets/svg/desktop/Person_lg.svg"); }
+    .pay-with-card form div:nth-child(1) label:focus-within::before {
+      content: url("~@/assets/svg/desktop/Person-active_lg.svg"); }
     .pay-with-card form div:nth-child(2) label::before {
       content: url("~@/assets/svg/desktop/Card_lg.svg"); }
+    .pay-with-card form div:nth-child(2) label:focus-within::before {
+      content: url("~@/assets/svg/desktop/Card-active_lg.svg"); }
+    .pay-with-card form div:nth-child(2) label.mastercard svg {
+      width: 40px;
+      height: 31px;
+      right: 20px;
+      bottom: 10px; }
+    .pay-with-card form div:nth-child(2) label.visa svg {
+      width: 40px;
+      right: 20px;
+      bottom: 9px; }
     .pay-with-card form div:nth-child(3) div:nth-child(1) {
       margin-right: 10px; }
       .pay-with-card form div:nth-child(3) div:nth-child(1) label::before {
         content: url("~@/assets/svg/desktop/Calendar_lg.svg"); }
+      .pay-with-card form div:nth-child(3) div:nth-child(1) label:focus-within::before {
+        content: url("~@/assets/svg/desktop/Calendar-active_lg.svg"); }
     .pay-with-card form div:nth-child(3) div:nth-child(2) {
       margin-left: 10px; }
       .pay-with-card form div:nth-child(3) div:nth-child(2) label::before {
         content: url("~@/assets/svg/desktop/Lock_lg.svg"); }
+      .pay-with-card form div:nth-child(3) div:nth-child(2) label:focus-within::before {
+        content: url("~@/assets/svg/desktop/Lock-active_lg.svg"); }
     .pay-with-card form div:nth-child(4) label::before {
       content: url("~@/assets/svg/desktop/Email_lg.svg"); }
+    .pay-with-card form div:nth-child(4) label:focus-within::before {
+      content: url("~@/assets/svg/desktop/Email-active_lg.svg"); }
   .pay-with-card form button {
     height: 60px;
     font-size: 20px;
     line-height: 1.4; } }
 
 .loading-wrapper {
-  margin-top: 188px;
-  margin-bottom: 196px; }
+  margin-top: 176px;
+  margin-bottom: 184px; }
   .loading-wrapper .loader {
     margin-left: auto;
     margin-right: auto;
@@ -978,8 +1035,8 @@ main {
           text-decoration: none; }
   @media (min-width: 768px) {
     .loading-wrapper {
-      margin-top: 232px;
-      margin-bottom: 268px; }
+      margin-top: 192px;
+      margin-bottom: 228px; }
       .loading-wrapper .loader {
         width: 120px;
         height: 120px; }

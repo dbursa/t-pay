@@ -27,9 +27,11 @@
 			</div>
 
 			<div>
-				<label for="">
+				<label class="mastercard" for="">
 					<span>Číslo karty <span class="required">*</span></span>
 					<input type="text" />
+					<master-card-header />
+					<!-- <visa-header /> -->
 				</label>
 			</div>
 

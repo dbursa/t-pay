@@ -1,7 +1,7 @@
 .loading-wrapper {
 	//margin is just for showing loading, don't use it in production
-	margin-top: 188px;
-	margin-bottom: 196px;
+	margin-top: 176px;
+	margin-bottom: 184px;
 	.loader {
 		@include mx-auto;
 		width: 60px;
@@ -56,8 +56,8 @@
 
 	@media (min-width: $tablet) {
 		//margin is just for showing loading, don't use it in production
-		margin-top: 232px;
-		margin-bottom: 268px;
+		margin-top: 192px;
+		margin-bottom: 228px;
 
 		.loader {
 			width: 120px;
