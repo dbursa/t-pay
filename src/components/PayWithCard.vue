@@ -39,7 +39,7 @@
 				<div>
 					<label for="">
 						<span>Expirace <span class="required">*</span></span>
-						<input type="text" placeholder="DD/MM" />
+						<input type="text" placeholder="MM/YY" />
 					</label>
 				</div>
 				<div>

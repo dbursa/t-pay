@@ -288,7 +288,9 @@ main {
         right: 9px;
         bottom: 9px; }
         .overview-basis form > div label a span {
-          margin-right: 2px; }
+          margin-right: 5px;
+          font-size: 12px;
+          line-height: 1.3; }
         .overview-basis form > div label a.copy-text {
           bottom: 8px; }
   @media (min-width: 768px) {
@@ -322,7 +324,9 @@ main {
             right: 13px;
             bottom: 15px; }
             .overview-basis form > div label a span {
-              margin-right: 4px; }
+              margin-right: 7px;
+              font-size: 14px;
+              line-height: 1.4; }
             .overview-basis form > div label a.copy-text {
               bottom: 14px; } }
 
@@ -753,6 +757,7 @@ main {
       height: 30px;
       width: 100%;
       font-size: 12px;
+      font-weight: 600;
       line-height: 2.3;
       text-align: center;
       text-decoration: none;
@@ -1128,7 +1133,7 @@ main {
           line-height: 1.75;
           margin-bottom: 12px; }
         .payment-failed .list ul {
-          max-width: 325px;
+          max-width: 293px;
           margin-left: auto;
           margin-right: auto; }
           .payment-failed .list ul li {
@@ -1147,6 +1152,7 @@ main {
     height: 30px;
     width: 100%;
     font-size: 12px;
+    font-weight: 600;
     line-height: 2.3;
     text-align: center;
     text-decoration: none;
@@ -1190,6 +1196,7 @@ main {
       font-size: 14px;
       line-height: 1.4;
       color: #697077;
+      font-weight: 400;
       margin: 0; }
     @media (min-width: 768px) {
       .waiting-for-payment .waiting {
@@ -1205,7 +1212,8 @@ main {
   .waiting-for-payment .bottom p {
     font-size: 12px;
     line-height: 1.3;
-    color: #343a3f;
+    color: #697077;
+    font-weight: 400;
     text-align: center;
     margin: 0;
     margin-bottom: 12px; }
@@ -1217,6 +1225,7 @@ main {
     height: 30px;
     width: 100%;
     font-size: 12px;
+    font-weight: 600;
     line-height: 2.3;
     text-align: center;
     text-decoration: none;

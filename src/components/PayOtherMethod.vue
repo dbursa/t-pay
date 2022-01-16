@@ -22,7 +22,7 @@
 		<form>
 			<div>
 				<label for="">
-					<span>Číslo karty</span>
+					<span>Číslo účtu</span>
 					<input
 						type="text"
 						id="card-number"
