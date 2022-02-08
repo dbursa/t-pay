@@ -17,43 +17,48 @@
 				</div>
 			</nav>
 
-			<div :class="['main-table', { 'detail-payment': this.isInfo }]">
-				<pay-method
-					v-if="
-						!payWithCardSelected &&
-						!payWithOtherBank &&
-						!payWithInternetBankingSelected &&
-						!loadingSelected &&
-						!paymentFailedSelected &&
-						!waitingForPaymentSelected
-					"
-					@showPayWithCard="payWithCardScreen"
-					@showPayWithOtherBank="payWithOtherBankScreen"
-					@showPayWithInternetBanking="payWithInternetBankingScreen"
-					@showLoading="loadingScreen"
-					@showPaymentFailed="paymentFailedScreen"
-					@showWaitingForPayment="waitingForPaymentScreen"
-				/>
+			<div class="table-wrapper">
+				<div :class="['main-table', { 'detail-payment': this.isInfo }]">
+					<pay-method
+						v-if="
+							!payWithCardSelected &&
+							!payWithOtherBank &&
+							!payWithInternetBankingSelected &&
+							!loadingSelected &&
+							!paymentFailedSelected &&
+							!waitingForPaymentSelected
+						"
+						@showPayWithCard="payWithCardScreen"
+						@showPayWithOtherBank="payWithOtherBankScreen"
+						@showPayWithInternetBanking="payWithInternetBankingScreen"
+						@showLoading="loadingScreen"
+						@showPaymentFailed="paymentFailedScreen"
+						@showWaitingForPayment="waitingForPaymentScreen"
+					/>
 
-				<pay-with-card v-if="payWithCardSelected" @showHomePage="homePage" />
+					<pay-with-card v-if="payWithCardSelected" @showHomePage="homePage" />
 
-				<pay-other-method v-if="payWithOtherBank" @showHomePage="homePage" />
+					<pay-other-method v-if="payWithOtherBank" @showHomePage="homePage" />
 
-				<pay-with-internet-banking
-					v-if="payWithInternetBankingSelected"
-					@showHomePage="homePage"
-				/>
+					<pay-with-internet-banking
+						v-if="payWithInternetBankingSelected"
+						@showHomePage="homePage"
+					/>
 
-				<loading v-if="loadingSelected" @showHomePage="homePage" />
+					<loading v-if="loadingSelected" @showHomePage="homePage" />
 
-				<payment-failed v-if="paymentFailedSelected" @showHomePage="homePage" />
+					<payment-failed
+						v-if="paymentFailedSelected"
+						@showHomePage="homePage"
+					/>
 
-				<waiting-for-payment
-					v-if="waitingForPaymentSelected"
-					@showHomePage="homePage"
-				/>
+					<waiting-for-payment
+						v-if="waitingForPaymentSelected"
+						@showHomePage="homePage"
+					/>
 
-				<payment-info v-if="isInfo" />
+					<payment-info v-if="isInfo" />
+				</div>
 			</div>
 
 			<footer>

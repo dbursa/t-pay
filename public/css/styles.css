@@ -6,7 +6,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   font-family: 'Sofia Pro', Arial, Helvetica, sans-serif;
   position: relative;
@@ -65,7 +65,8 @@ main {
         line-height: 0; }
   @media (min-width: 768px) {
     main nav {
-      padding: 24px; }
+      padding: 24px;
+      padding-bottom: 0; }
     main button {
       height: 40px;
       border-width: 2px; }
@@ -166,7 +167,7 @@ main {
             transition: all 0.3s; }
             main .dropdown > div a:hover {
               background: #4d5358; } }
-  main .main-table {
+  main .table-wrapper .main-table {
     display: flex;
     align-items: center;
     height: 662px;
@@ -176,25 +177,30 @@ main {
     margin: auto;
     background-color: #fff;
     position: relative; }
-    main .main-table.detail-payment {
+    main .table-wrapper .main-table.detail-payment {
       margin-top: 180px; }
-    @media (min-width: 768px) {
-      main .main-table {
+  @media (min-width: 768px) {
+    main .table-wrapper {
+      display: flex;
+      align-items: center;
+      height: calc(100% - 40px - 2 * 28px);
+      width: 100%;
+      justify-content: center; }
+      main .table-wrapper .main-table {
         width: 400px;
         height: 620px;
         display: flex;
         align-items: center;
         border-radius: 8px;
         padding: 0 24px; }
-        main .main-table.detail-payment {
+        main .table-wrapper .main-table.detail-payment {
           margin-top: 250px; } }
-    @media (min-width: 1400px) and (min-height: 1000px) {
-      main .main-table {
-        margin-top: 0 !important;
-        width: 480px;
-        height: 800px;
-        border-radius: 8px;
-        padding: 0 40px; } }
+  @media (min-width: 1400px) and (min-height: 1000px) {
+    main .table-wrapper .main-table {
+      width: 480px;
+      height: 800px;
+      border-radius: 8px;
+      padding: 0 40px; } }
   main footer {
     display: flex;
     flex-direction: row;
@@ -209,8 +215,11 @@ main {
       margin-right: 9px;
       color: #878d96; }
     @media (min-width: 768px) {
-      main footer p {
-        font-size: 12px; } }
+      main footer {
+        position: absolute;
+        bottom: 28px; }
+        main footer p {
+          font-size: 12px; } }
     @media (min-width: 992px) {
       main footer {
         display: flex;
@@ -219,13 +228,28 @@ main {
         margin: 0;
         position: absolute;
         right: 24px;
-        bottom: -50px; }
+        bottom: calc(50% - 360px); }
         main footer p {
           text-align: right;
           margin: 0;
           margin-bottom: 12px; }
         main footer svg {
           margin-left: auto; } }
+    @media (min-width: 1400px) and (min-height: 1000px) {
+      main footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        right: initial;
+        bottom: 28px; }
+        main footer p {
+          margin: 0;
+          font-size: 13px;
+          line-height: 1.4;
+          margin-right: 12px; }
+        main footer svg {
+          margin: 0; } }
 
 .overview-basis .back a {
   display: flex;
@@ -748,20 +772,25 @@ main {
     .pay-methods h2 {
       font-size: 14px;
       line-height: 1.1;
-      margin-bottom: 10px; }
+      margin-bottom: 14px; }
     .pay-methods > div {
       margin-bottom: 20px;
       font-size: 16px; }
       .pay-methods > div a.btn {
         height: 64px;
         margin-bottom: 8px; }
+        .pay-methods > div a.btn div {
+          font-size: 16px; }
       .pay-methods > div button {
         width: 152px;
         height: 64px; }
     .pay-methods .internet-banking div {
       margin-bottom: 12px; }
     .pay-methods .others {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+      .pay-methods .others div button:first-child {
+        font-size: 14px;
+        line-height: 1.1; } }
 
 .payment-info {
   position: absolute;
@@ -1193,6 +1222,8 @@ main {
       width: 40px;
       right: 20px;
       bottom: 9px; }
+    .pay-with-card form div:nth-child(4) {
+      margin-bottom: 40px; }
   .pay-with-card form button {
     height: 60px;
     font-size: 20px;

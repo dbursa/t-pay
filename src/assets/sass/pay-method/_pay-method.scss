@@ -498,7 +498,7 @@
 		h2 {
 			font-size: 14px;
 			line-height: 1.1;
-			margin-bottom: 10px;
+			margin-bottom: 14px;
 		}
 
 		> div {
@@ -509,6 +509,10 @@
 				&.btn {
 					height: 64px;
 					margin-bottom: 8px;
+
+					div {
+						font-size: 16px;
+					}
 				}
 			}
 
@@ -526,6 +530,15 @@
 
 		.others {
 			margin-bottom: 0;
+
+			div {
+				button {
+					&:first-child {
+						font-size: 14px;
+						line-height: 1.1;
+					}
+				}
+			}
 		}
 	}
 }
