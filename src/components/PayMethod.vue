@@ -15,12 +15,7 @@
 					<div>Zaplatit přes</div>
 					<apple-pay />
 				</a>
-				<a
-					href="#"
-					class="btn"
-					@click="paymentFailed()"
-					:desktop-version="desktopVersion"
-				>
+				<a href="#" class="btn" @click="paymentFailed()">
 					<div>Zaplatit přes</div>
 					<google-pay />
 				</a>
@@ -30,7 +25,7 @@
 			<h2>Odložená platba</h2>
 			<div>
 				<button @click="waitingForPayment()">
-					<platim-pak :desktop-version="desktopVersion" />
+					<platim-pak />
 				</button>
 			</div>
 		</div>
@@ -39,37 +34,37 @@
 
 			<div class="first-row">
 				<button>
-					<ceska-sporitelna :desktop-version="desktopVersion" />
+					<ceska-sporitelna />
 				</button>
 				<button>
-					<kb :desktop-version="desktopVersion" />
+					<kb />
 				</button>
 				<button @click="payWithInternetBanking()">
-					<csob :desktop-version="desktopVersion" />
+					<csob />
 				</button>
 			</div>
 
 			<div class="second-row">
 				<button>
-					<postovni-sporitelna :desktop-version="desktopVersion" />
+					<postovni-sporitelna />
 				</button>
 				<button>
-					<raiffeinsen-bank :desktop-version="desktopVersion" />
+					<raiffeinsen-bank />
 				</button>
 				<button>
-					<m-bank :desktop-version="desktopVersion" />
+					<m-bank />
 				</button>
 			</div>
 
 			<div class="third-row">
 				<button>
-					<fio :desktop-version="desktopVersion" />
+					<fio />
 				</button>
 				<button>
-					<moneta :desktop-version="desktopVersion" />
+					<moneta />
 				</button>
 				<button>
-					<equa-bank :desktop-version="desktopVersion" />
+					<equa-bank />
 				</button>
 			</div>
 		</div>
@@ -78,11 +73,11 @@
 
 			<div>
 				<button @click="payWithOtherBank()">
-					<other-bank v-if="desktopVersion" />
+					<other-bank />
 					<div>Jiná banka</div>
 				</button>
 				<button>
-					<bitcoin :desktop-version="desktopVersion" />
+					<bitcoin />
 				</button>
 			</div>
 		</div>
@@ -92,13 +87,6 @@
 <script>
 export default {
 	name: 'PayMethod',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
 
 	methods: {
 		payWithCard() {

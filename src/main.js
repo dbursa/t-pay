@@ -7,7 +7,7 @@ import Loading from './components/Loading.vue'
 import WaitingForPayment from './components/WaitingForPayment.vue'
 import PaymentFailed from './components/PaymentFailed.vue'
 
-
+//icons
 import Dropdown from './components/Dropdown.vue'
 import ArrowDown from './components/icons/ArrowDown.vue'
 import ArrowBack from './components/icons/ArrowBack.vue'
@@ -21,16 +21,10 @@ import Print from './components/icons/Print.vue'
 import Save from './components/icons/Save.vue'
 import ExternalLink from './components/icons/ExternalLink.vue'
 import QuestionMarkRed from './components/icons/QuestionMarkRed.vue'
-
-//desktop svg
-import ArrowBackLg from './components/icons/desktop/ArrowBackLg.vue'
-import CopyLg from './components/icons/desktop/CopyLg.vue'
-import EmailLg from './components/icons/desktop/EmailLg.vue'
-import PrintLg from './components/icons/desktop/PrintLg.vue'
-
 import PaymentRefused from './components/icons/payment-process/PaymentRefused.vue'
 import PaymentInProgress from './components/icons/payment-process/PaymentInProgress.vue'
 
+//icons banks
 import ApplePay from './components/icons/pay-methods/ApplePay.vue'
 import GooglePay from './components/icons/pay-methods/GooglePay.vue'
 import MasterCard from './components/icons/pay-methods/MasterCard.vue'
@@ -49,10 +43,6 @@ import RaiffeinsenBank from './components/icons/pay-methods/RaiffeinsenBank.vue'
 import OtherBank from './components/icons/pay-methods/OtherBank.vue'
 import VisaHeader from './components/icons/pay-with-card/Visa.vue'
 import MasterCardHeader from './components/icons/pay-with-card/MasterCard.vue'
-
-//desktop svg
-import VisaHeaderLg from './components/icons/pay-with-card/desktop/VisaLg.vue'
-import MasterCardHeaderLg from './components/icons/pay-with-card/desktop/MasterCardLg.vue'
 
 
 Vue.component('pay-method', PayMethod)
@@ -96,16 +86,6 @@ Vue.component('external-link', ExternalLink)
 Vue.component('payment-refused', PaymentRefused)
 Vue.component('payment-in-progress', PaymentInProgress)
 Vue.component('question-mark-red', QuestionMarkRed)
-
-
-//desktop
-Vue.component('visa-header-lg', VisaHeaderLg)
-Vue.component('master-card-header-lg', MasterCardHeaderLg)
-Vue.component('arrow-back-lg', ArrowBackLg)
-Vue.component('copy-lg', CopyLg)
-Vue.component('email-lg', EmailLg)
-Vue.component('print-lg', PrintLg)
-
 
 import Vue from 'vue'
 import App from './App.vue'

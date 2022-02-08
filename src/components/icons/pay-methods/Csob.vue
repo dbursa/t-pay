@@ -1,7 +1,7 @@
 <template>
 	<svg
-		:width="this.width"
-		:height="this.height"
+		width="39"
+		height="30"
 		viewBox="0 0 39 30"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -24,31 +24,5 @@
 <script>
 export default {
 	name: 'Csob',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
-
-	data() {
-		return {
-			height: '30',
-			width: '39',
-
-			desktopSize: {
-				height: '40',
-				width: '51',
-			},
-		};
-	},
-
-	created() {
-		if (this.desktopVersion) {
-			this.height = this.desktopSize.height;
-			this.width = this.desktopSize.width;
-		}
-	},
 };
 </script>

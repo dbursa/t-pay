@@ -1,7 +1,7 @@
 <template>
 	<svg
-		:width="this.width"
-		:height="this.height"
+		width="60"
+		height="34"
 		viewBox="0 0 60 34"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -111,37 +111,5 @@
 <script>
 export default {
 	name: 'PostovniSporitelna',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
-
-	data() {
-		return {
-			height: '34',
-			width: '60',
-
-			desktopSize: {
-				height: '40',
-				width: '71',
-			},
-		};
-	},
-
-	created() {
-		if (this.desktopVersion) {
-			this.height = this.desktopSize.height;
-			this.width = this.desktopSize.width;
-		}
-	},
 };
 </script>
-
-<style scoped>
-svg {
-	overflow: visible;
-}
-</style>

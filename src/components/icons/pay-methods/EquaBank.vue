@@ -1,7 +1,7 @@
 <template>
 	<svg
-		:width="this.width"
-		:height="this.height"
+		width="60"
+		height="13"
 		viewBox="0 0 60 13"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -62,31 +62,5 @@
 <script>
 export default {
 	name: 'EquaBank',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
-
-	data() {
-		return {
-			height: '13',
-			width: '60',
-
-			desktopSize: {
-				height: '20',
-				width: '97',
-			},
-		};
-	},
-
-	created() {
-		if (this.desktopVersion) {
-			this.height = this.desktopSize.height;
-			this.width = this.desktopSize.width;
-		}
-	},
 };
 </script>

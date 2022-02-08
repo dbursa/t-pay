@@ -4,7 +4,7 @@
 			<nav>
 				<button class="close">
 					<close />
-					<div v-if="tabletSize">Návrat do obchodu</div>
+					<div>Návrat do obchodu</div>
 				</button>
 
 				<div>
@@ -13,13 +13,12 @@
 						<div>Detail platby</div>
 					</button>
 
-					<dropdown locale="CZ" :tablet="tabletSize" />
+					<dropdown locale="CZ" />
 				</div>
 			</nav>
 
 			<div :class="['main-table', { 'detail-payment': this.isInfo }]">
 				<pay-method
-					:desktop-version="this.tabletSize"
 					v-if="
 						!payWithCardSelected &&
 						!payWithOtherBank &&
@@ -36,11 +35,7 @@
 					@showWaitingForPayment="waitingForPaymentScreen"
 				/>
 
-				<pay-with-card
-					v-if="payWithCardSelected"
-					:desktop-version="this.tabletSize"
-					@showHomePage="homePage"
-				/>
+				<pay-with-card v-if="payWithCardSelected" @showHomePage="homePage" />
 
 				<pay-other-method v-if="payWithOtherBank" @showHomePage="homePage" />
 
@@ -77,7 +72,6 @@ export default {
 		return {
 			isInfo: false,
 			tabletSize: false,
-			windowWidth: window.innerWidth,
 			payWithCardSelected: false,
 			payWithInternetBankingSelected: false,
 			payWithOtherBank: false,
@@ -85,12 +79,6 @@ export default {
 			paymentFailedSelected: false,
 			waitingForPaymentSelected: false,
 		};
-	},
-
-	created() {
-		if (this.windowWidth >= 768) {
-			this.tabletSize = true;
-		}
 	},
 
 	methods: {
@@ -129,18 +117,6 @@ export default {
 			this.paymentFailedSelected = false;
 			this.waitingForPaymentSelected = false;
 		},
-	},
-
-	mounted() {
-		window.onresize = () => {
-			this.windowWidth = window.innerWidth;
-
-			if (this.windowWidth >= 768) {
-				this.tabletSize = true;
-			} else {
-				this.tabletSize = false;
-			}
-		};
 	},
 };
 </script>

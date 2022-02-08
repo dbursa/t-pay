@@ -1,7 +1,7 @@
 <template>
 	<svg
-		:width="this.width"
-		:height="this.height"
+		width="60"
+		height="26"
 		viewBox="0 0 80 35"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -92,31 +92,5 @@
 <script>
 export default {
 	name: 'CeskaSporitelna',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
-
-	data() {
-		return {
-			height: '26',
-			width: '60',
-
-			desktopSize: {
-				height: '32',
-				width: '75',
-			},
-		};
-	},
-
-	created() {
-		if (this.desktopVersion) {
-			this.height = this.desktopSize.height;
-			this.width = this.desktopSize.width;
-		}
-	},
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
 	<svg
-		:width="this.width"
-		:height="this.height"
+		width="76"
+		height="16"
 		viewBox="0 0 76 16"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
@@ -37,31 +37,5 @@
 <script>
 export default {
 	name: 'Moneta',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
-
-	data() {
-		return {
-			height: '16',
-			width: '76',
-
-			desktopSize: {
-				height: '20',
-				width: '95',
-			},
-		};
-	},
-
-	created() {
-		if (this.desktopVersion) {
-			this.height = this.desktopSize.height;
-			this.width = this.desktopSize.width;
-		}
-	},
 };
 </script>

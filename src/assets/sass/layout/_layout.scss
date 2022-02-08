@@ -61,6 +61,10 @@ main {
 		&.close {
 			width: 32px;
 			line-height: 0;
+
+			div {
+				display: none;
+			}
 		}
 
 		&.info {
@@ -112,6 +116,10 @@ main {
 						}
 					}
 				}
+
+				div {
+					display: block;
+				}
 			}
 
 			&.info {
@@ -150,6 +158,10 @@ main {
 			width: 100%;
 			justify-content: space-around;
 
+			.desktop {
+				display: none;
+			}
+
 			.open {
 				svg {
 					transform: rotate(180deg);
@@ -187,8 +199,16 @@ main {
 			button {
 				justify-content: center;
 
+				.desktop {
+					display: inline-block;
+				}
+
 				div {
 					&:nth-child(2) {
+						display: none;
+					}
+
+					&:nth-child(3) {
 						margin-left: 8px;
 						margin-right: 6px;
 					}
