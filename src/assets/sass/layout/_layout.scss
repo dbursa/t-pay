@@ -33,6 +33,7 @@ main {
 	color: $main-color;
 	height: 100%;
 	width: 100%;
+	position: relative;
 
 	nav {
 		padding: 12px;
@@ -223,9 +224,12 @@ main {
 	}
 
 	.main-table {
+		display: flex;
+		align-items: center;
+		height: 662px;
 		width: 272px;
 		border-radius: $border-radius;
-		padding: 12px;
+		padding: 0 12px;
 		margin: auto;
 		background-color: #fff;
 		position: relative;
@@ -235,17 +239,25 @@ main {
 		}
 
 		@media (min-width: $tablet) {
-			width: 480px;
+			width: 400px;
+			height: 620px;
+			display: flex;
+			align-items: center;
 			border-radius: $border-radius-lg;
-			padding: 40px;
+			padding: 0 24px;
 
 			&.detail-payment {
 				margin-top: 250px;
 			}
 		}
 
-		@media (min-width: $desktop) {
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 			margin-top: 0 !important;
+
+			width: 480px;
+			height: 800px;
+			border-radius: $border-radius-lg;
+			padding: 0 40px;
 		}
 	}
 
@@ -254,7 +266,6 @@ main {
 		width: 100%;
 		justify-content: center;
 		margin-top: 12px;
-		padding-bottom: 32px;
 
 		p {
 			display: flex;
@@ -266,11 +277,27 @@ main {
 		}
 
 		@media (min-width: $tablet) {
-			margin-top: 144px;
-			padding-bottom: 28px;
+			p {
+				font-size: 12px;
+			}
+		}
+
+		@media (min-width: $desktop-sm) {
+			@include col;
+			width: 128px;
+			margin: 0;
+			position: absolute;
+			right: 24px;
+			bottom: -50px;
 
 			p {
-				font-size: 13px;
+				text-align: right;
+				margin: 0;
+				margin-bottom: 12px;
+			}
+
+			svg {
+				margin-left: auto;
 			}
 		}
 	}

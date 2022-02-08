@@ -1,6 +1,8 @@
 <template>
 	<div class="waiting-for-payment">
 		<div class="waiting">
+			<payment-in-progress />
+
 			<h1>Čekáme na platbu...</h1>
 			<p>Platba nebyla dosud přijata.</p>
 		</div>

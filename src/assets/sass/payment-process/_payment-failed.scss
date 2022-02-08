@@ -1,12 +1,5 @@
 .payment-failed {
-	margin-top: 53px;
-	margin-bottom: 61px;
-
-	@media (min-width: $tablet) {
-		margin-top: 70px;
-		margin-bottom: 0;
-	}
-
+	width: 100%;
 	.header {
 		@include col;
 		text-align: center;
@@ -36,6 +29,26 @@
 			margin-bottom: 40px;
 
 			svg {
+				height: 100px;
+				width: 100px;
+				margin-bottom: 24px;
+			}
+
+			h1 {
+				font-size: 24px;
+				line-height: 1.4;
+				margin-bottom: 4px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			svg {
+				height: 120px;
+				width: 120px;
 				margin-bottom: 40px;
 			}
 
@@ -87,17 +100,42 @@
 		}
 
 		@media (min-width: $tablet) {
+			margin-bottom: 58px;
+
+			p {
+				font-size: 14px;
+				line-height: 1.4;
+				margin-bottom: 12px;
+			}
+
+			ul {
+				max-width: 284px;
+				@include mx-auto;
+
+				li {
+					font-size: 14px;
+					line-height: 1.25;
+					margin-bottom: 12px;
+
+					svg {
+						height: 20px;
+						width: 20px;
+						left: -32px;
+					}
+				}
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 			margin-bottom: 112px;
 
 			p {
 				font-size: 16px;
 				line-height: 1.75;
-				margin-bottom: 12px;
 			}
 
 			ul {
 				max-width: 293px;
-				@include mx-auto;
 
 				li {
 					font-size: 16px;
@@ -124,11 +162,15 @@
 			}
 
 			@media (min-width: $tablet) {
-				@include btn-sm-desktop;
+				@include btn-tablet;
 
 				&:nth-child(2) {
 					margin-top: 12px;
 				}
+			}
+
+			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+				@include btn-sm-desktop;
 			}
 		}
 	}

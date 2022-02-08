@@ -1,5 +1,6 @@
 <template>
 	<svg
+		id="visa"
 		width="38"
 		height="12"
 		viewBox="0 0 38 12"

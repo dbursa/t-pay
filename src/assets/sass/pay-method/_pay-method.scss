@@ -1,4 +1,6 @@
 .pay-methods {
+	width: 100%;
+
 	svg {
 		rect {
 			@include trans;
@@ -33,6 +35,7 @@
 
 				div {
 					margin-right: 10px;
+					font-size: 14px;
 				}
 
 				&:first-child {
@@ -167,13 +170,9 @@
 
 	@media (min-width: $tablet) {
 		h2 {
-			font-size: 14px;
-			line-height: 1.1;
-			margin-bottom: 10px;
-		}
-
-		.card {
-			margin-bottom: 14px;
+			font-size: 12px;
+			line-height: 1;
+			margin-bottom: 8px;
 		}
 
 		> div {
@@ -181,7 +180,8 @@
 
 			a {
 				&.btn {
-					height: 64px;
+					height: 48px;
+					margin-bottom: 10px;
 
 					&:first-child {
 						.options {
@@ -200,14 +200,14 @@
 			}
 
 			button {
-				width: 152px;
+				width: 128px;
+				height: 50px;
+				@include trans;
 			}
 		}
 
 		.deffered {
 			button {
-				@include trans;
-
 				&:hover {
 					background: #0db1f0;
 
@@ -228,12 +228,10 @@
 
 		.internet-banking {
 			div {
-				margin-bottom: 12px;
+				margin-bottom: 8px;
 
 				&.first-row {
 					button {
-						@include trans;
-
 						&:nth-child(1) {
 							&:hover {
 								background: #135091;
@@ -290,8 +288,6 @@
 
 				&.second-row {
 					button {
-						@include trans;
-
 						&:nth-child(1) {
 							&:hover {
 								background: #e30613;
@@ -322,8 +318,6 @@
 					margin-bottom: 0;
 
 					button {
-						@include trans;
-
 						&:nth-child(1) {
 							&:hover {
 								background: #9ec32b;
@@ -394,8 +388,6 @@
 			margin-bottom: 0;
 			div {
 				button {
-					@include trans;
-
 					&:nth-child(1) {
 						@include row;
 						justify-content: center;
@@ -432,6 +424,41 @@
 					}
 				}
 			}
+		}
+	}
+
+	@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		h2 {
+			font-size: 14px;
+			line-height: 1.1;
+			margin-bottom: 10px;
+		}
+
+		> div {
+			margin-bottom: 20px;
+			font-size: 16px;
+
+			a {
+				&.btn {
+					height: 64px;
+					margin-bottom: 8px;
+				}
+			}
+
+			button {
+				width: 152px;
+				height: 64px;
+			}
+		}
+
+		.internet-banking {
+			div {
+				margin-bottom: 12px;
+			}
+		}
+
+		.others {
+			margin-bottom: 0;
 		}
 	}
 }

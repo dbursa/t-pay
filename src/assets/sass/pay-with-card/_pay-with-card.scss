@@ -1,31 +1,6 @@
 .pay-with-card {
 	.back {
-		a {
-			@include row;
-			justify-content: center;
-			align-items: center;
-			color: $h2-color;
-			font-weight: 600;
-			font-size: 12px;
-			line-height: 1.3;
-			text-decoration: none;
-
-			:hover {
-				text-decoration: underline;
-			}
-
-			svg {
-				margin-right: 4px;
-			}
-
-			@media (min-width: $tablet) {
-				font-size: 14px;
-
-				svg {
-					margin-right: 8px;
-				}
-			}
-		}
+		@include back;
 	}
 
 	.header {
@@ -40,11 +15,11 @@
 			align-items: center;
 
 			svg {
-				&:nth-child(1) {
+				&#visa {
 					margin-right: 6px;
 				}
 
-				&:nth-child(2) {
+				&#mastercard {
 					margin-left: 6px;
 				}
 			}
@@ -59,6 +34,33 @@
 		}
 
 		@media (min-width: $tablet) {
+			@include mx-auto;
+			margin-top: 25px;
+			margin-bottom: 20px;
+
+			div {
+				margin-top: 0;
+
+				svg {
+					&#visa {
+						height: 16px;
+						width: 50px;
+					}
+
+					&#mastercard {
+						height: 32px;
+						width: 42px;
+					}
+				}
+			}
+
+			h1 {
+				font-size: 24px;
+				line-height: 1.3;
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 			@include row;
 			@include mx-auto;
 			justify-content: space-around;
@@ -224,15 +226,15 @@
 
 		@media (min-width: $tablet) {
 			div {
-				margin-bottom: 24px;
+				margin-bottom: 20px;
 
 				label {
-					font-size: 14px;
+					font-size: 12px;
 					line-height: 1.4;
 					letter-spacing: 0.1em;
 
 					input {
-						@include form-input-desktop;
+						@include form-input-tablet;
 
 						&:focus-visible {
 							@include focus-input;
@@ -240,7 +242,7 @@
 					}
 
 					&::before {
-						@include input-img-desktop;
+						height: $input-height-tablet;
 						margin: 0 18px;
 					}
 				}
@@ -276,7 +278,7 @@
 								width: 40px;
 								height: 31px;
 								right: 20px;
-								bottom: 10px;
+								bottom: 6px;
 							}
 						}
 
@@ -284,7 +286,7 @@
 							svg {
 								width: 40px;
 								right: 20px;
-								bottom: 9px;
+								bottom: 15px;
 							}
 						}
 					}
@@ -324,6 +326,8 @@
 				}
 
 				&:nth-child(4) {
+					margin-bottom: 84px;
+
 					label {
 						&::before {
 							content: url('~@/assets/svg/desktop/Email_lg.svg');
@@ -332,6 +336,55 @@
 						&:focus-within {
 							&::before {
 								content: url('~@/assets/svg/desktop/Email-active_lg.svg');
+							}
+						}
+					}
+				}
+			}
+
+			button {
+				@include btn-tablet;
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			div {
+				margin-bottom: 24px;
+
+				label {
+					font-size: 14px;
+					line-height: 1.4;
+					letter-spacing: 0.1em;
+
+					input {
+						@include form-input-desktop;
+
+						&:focus-visible {
+							@include focus-input;
+						}
+					}
+
+					&::before {
+						height: $input-height-desktop;
+					}
+				}
+
+				&:nth-child(2) {
+					label {
+						&.mastercard {
+							svg {
+								width: 40px;
+								height: 31px;
+								right: 20px;
+								bottom: 10px;
+							}
+						}
+
+						&.visa {
+							svg {
+								width: 40px;
+								right: 20px;
+								bottom: 9px;
 							}
 						}
 					}

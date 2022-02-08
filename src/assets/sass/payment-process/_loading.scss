@@ -1,7 +1,5 @@
 .loading-wrapper {
-	//margin is just for showing loading, don't use it in production
-	margin-top: 176px;
-	margin-bottom: 184px;
+	width: 100%;
 	.loader {
 		@include mx-auto;
 		width: 60px;
@@ -40,6 +38,7 @@
 		}
 
 		p {
+			margin: 0;
 			color: $h2-color;
 			font-size: 14px;
 			line-height: 1.4;
@@ -55,10 +54,6 @@
 	}
 
 	@media (min-width: $tablet) {
-		//margin is just for showing loading, don't use it in production
-		margin-top: 192px;
-		margin-bottom: 228px;
-
 		.loader {
 			width: 120px;
 			height: 120px;
@@ -69,6 +64,22 @@
 			}
 		}
 
+		.text {
+			margin-top: 40px;
+
+			h1 {
+				font-size: 24px;
+				line-height: 1.3;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 		.text {
 			margin-top: 80px;
 

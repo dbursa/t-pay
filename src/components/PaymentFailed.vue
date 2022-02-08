@@ -1,8 +1,7 @@
 <template>
 	<div class="payment-failed">
 		<div class="header">
-			<payment-refused v-if="!desktopVersion" />
-			<payment-refused-lg v-if="desktopVersion" />
+			<payment-refused />
 
 			<h1>Platba neproběhla</h1>
 			<p>Mrzí nás to, ale platba byla zamítnuta.</p>
@@ -38,13 +37,6 @@
 <script>
 export default {
 	name: 'PaymentFailed',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
 
 	methods: {
 		back() {

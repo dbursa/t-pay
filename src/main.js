@@ -28,12 +28,8 @@ import CopyLg from './components/icons/desktop/CopyLg.vue'
 import EmailLg from './components/icons/desktop/EmailLg.vue'
 import PrintLg from './components/icons/desktop/PrintLg.vue'
 
-
 import PaymentRefused from './components/icons/payment-process/PaymentRefused.vue'
-
-//desktop svg
-import PaymentRefusedLg from './components/icons/payment-process/desktop/PaymentRefusedLg.vue'
-
+import PaymentInProgress from './components/icons/payment-process/PaymentInProgress.vue'
 
 import ApplePay from './components/icons/pay-methods/ApplePay.vue'
 import GooglePay from './components/icons/pay-methods/GooglePay.vue'
@@ -98,6 +94,7 @@ Vue.component('print', Print)
 Vue.component('save', Save)
 Vue.component('external-link', ExternalLink)
 Vue.component('payment-refused', PaymentRefused)
+Vue.component('payment-in-progress', PaymentInProgress)
 Vue.component('question-mark-red', QuestionMarkRed)
 
 
@@ -108,7 +105,6 @@ Vue.component('arrow-back-lg', ArrowBackLg)
 Vue.component('copy-lg', CopyLg)
 Vue.component('email-lg', EmailLg)
 Vue.component('print-lg', PrintLg)
-Vue.component('payment-refused-lg', PaymentRefusedLg)
 
 
 import Vue from 'vue'

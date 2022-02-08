@@ -52,7 +52,7 @@
 	}
 
 	@media (min-width: $tablet) {
-		margin-left: -40px;
+		margin-left: -24px;
 		top: -230px;
 
 		h2 {
@@ -95,7 +95,7 @@
 		}
 	}
 
-	@media (min-width: $desktop) {
+	@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 		left: 600px;
 		top: 50%;
 		margin-top: -25%;

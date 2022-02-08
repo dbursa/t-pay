@@ -1,31 +1,6 @@
 .overview-basis {
 	.back {
-		a {
-			@include row;
-			justify-content: center;
-			align-items: center;
-			color: $h2-color;
-			font-weight: 600;
-			font-size: 12px;
-			line-height: 1.3;
-			text-decoration: none;
-
-			:hover {
-				text-decoration: underline;
-			}
-
-			svg {
-				margin-right: 4px;
-			}
-
-			@media (min-width: $tablet) {
-				font-size: 14px;
-
-				svg {
-					margin-right: 8px;
-				}
-			}
-		}
+		@include back;
 	}
 
 	.header {
@@ -53,11 +28,27 @@
 		}
 
 		@media (min-width: $tablet) {
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			div {
+				margin-bottom: 12px;
+				h1 {
+					font-size: 24px;
+					line-height: 1;
+				}
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 			margin-top: 36px;
 			margin-bottom: 40px;
 
 			div {
-				margin-bottom: 12px;
 				h1 {
 					font-size: 36px;
 					line-height: 1.3;
@@ -125,7 +116,7 @@
 
 			> div {
 				width: 100%;
-				margin-bottom: 20px;
+				margin-bottom: 16px;
 
 				&:nth-child(2) {
 					width: 49%;
@@ -138,17 +129,55 @@
 				}
 
 				label {
+					font-size: 12px;
+					line-height: 1.3;
+					letter-spacing: 0.05em;
+
+					input {
+						@include form-input-tablet;
+						padding: 0 12px;
+
+						&:read-only {
+							pointer-events: none;
+						}
+					}
+
+					a {
+						right: 13px;
+						bottom: 13px;
+
+						span {
+							margin-right: 7px;
+							font-size: 14px;
+							line-height: 1.4;
+						}
+
+						&.copy-text {
+							bottom: 12px;
+						}
+
+						&.copy {
+							svg {
+								width: 13px;
+								height: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			> div {
+				margin-bottom: 20px;
+
+				label {
 					font-size: 14px;
 					line-height: 1.4;
 					letter-spacing: 0.1em;
 
 					input {
 						@include form-input-desktop;
-						padding: 0 12px;
-
-						&:read-only {
-							pointer-events: none;
-						}
 					}
 
 					a {
@@ -265,16 +294,16 @@
 					margin-right: 20px;
 
 					img {
-						width: 192px;
-						height: 192px;
+						width: 148px;
+						height: 148px;
 					}
 				}
 
 				&.qr-text {
-					font-size: 14px;
+					font-size: 12px;
 					line-height: 1.4;
 					text-align: left;
-					margin-bottom: 20px;
+					margin-bottom: 12px;
 
 					a {
 						display: none;
@@ -295,7 +324,7 @@
 			}
 
 			.bill {
-				font-size: 14px;
+				font-size: 12px;
 				line-height: 1.4;
 				text-align: left;
 				margin: 0;
@@ -305,12 +334,44 @@
 					max-width: max-content;
 
 					a {
+						svg {
+							margin-right: 4px;
+							width: 16px;
+							height: 16px;
+						}
+
 						&:first-child {
 							margin-right: 12px;
 						}
+					}
+				}
+			}
+		}
 
+		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			div {
+				&.qr-img {
+					img {
+						width: 192px;
+						height: 192px;
+					}
+				}
+
+				&.qr-text {
+					font-size: 14px;
+					margin-bottom: 20px;
+				}
+			}
+
+			.bill {
+				font-size: 14px;
+
+				div {
+					a {
 						svg {
 							margin-right: 8px;
+							width: 20px;
+							height: 20px;
 						}
 					}
 				}

@@ -1,5 +1,6 @@
 <template>
 	<svg
+		id="mastercard"
 		width="31"
 		height="24"
 		viewBox="0 0 31 24"

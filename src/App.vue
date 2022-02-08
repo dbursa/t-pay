@@ -42,25 +42,17 @@
 					@showHomePage="homePage"
 				/>
 
-				<pay-other-method
-					v-if="payWithOtherBank"
-					:desktop-version="this.tabletSize"
-					@showHomePage="homePage"
-				/>
+				<pay-other-method v-if="payWithOtherBank" @showHomePage="homePage" />
 
 				<pay-with-internet-banking
 					v-if="payWithInternetBankingSelected"
-					:desktop-version="this.tabletSize"
 					@showHomePage="homePage"
 				/>
 
 				<loading v-if="loadingSelected" @showHomePage="homePage" />
 
-				<payment-failed
-					v-if="paymentFailedSelected"
-					@showHomePage="homePage"
-					:desktop-version="this.tabletSize"
-				/>
+				<payment-failed v-if="paymentFailedSelected" @showHomePage="homePage" />
+
 				<waiting-for-payment
 					v-if="waitingForPaymentSelected"
 					@showHomePage="homePage"
@@ -70,7 +62,7 @@
 			</div>
 
 			<footer>
-				<p>Bezpečnou a rychlou platbu zařídí</p>
+				<p>O bezpečnou a rychlou platbu se postará</p>
 				<the-pay />
 			</footer>
 		</main>

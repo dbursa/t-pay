@@ -2,17 +2,14 @@
 	<div class="pay-with-card">
 		<div class="back">
 			<a href="#" @click="back()">
-				<arrow-back v-if="!desktopVersion" />
-				<arrow-back-lg v-else />
+				<arrow-back />
 				<div>Zpět na výběr metody</div>
 			</a>
 		</div>
 		<div class="header">
 			<div>
-				<visa-header v-if="!desktopVersion" />
-				<master-card-header v-if="!desktopVersion" />
-				<visa-header-lg v-if="desktopVersion" />
-				<master-card-header-lg v-if="desktopVersion" />
+				<visa-header />
+				<master-card-header />
 			</div>
 			<h1>Platba kartou</h1>
 		</div>
@@ -27,6 +24,7 @@
 			</div>
 
 			<div>
+				<!-- have to remove mastercard class and add visa class -->
 				<label class="mastercard" for="">
 					<span>Číslo karty <span class="required">*</span></span>
 					<input type="text" />
@@ -64,13 +62,6 @@
 <script>
 export default {
 	name: 'PayWithCard',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
 
 	methods: {
 		back() {

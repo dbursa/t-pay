@@ -2,8 +2,7 @@
 	<div class="overview-basis pay-other-method">
 		<div class="back">
 			<a href="#" @click="back()">
-				<arrow-back v-if="!desktopVersion" />
-				<arrow-back-lg v-else />
+				<arrow-back />
 				<div>Zpět na výběr metody</div>
 			</a>
 		</div>
@@ -31,8 +30,7 @@
 					/>
 					<a class="copy-text copy" data-clipboard-target="#card-number">
 						<span>Kopírovat</span>
-						<copy v-if="!desktopVersion" />
-						<copy-lg v-else />
+						<copy />
 					</a>
 				</label>
 			</div>
@@ -42,8 +40,7 @@
 					<span>Částka</span>
 					<input type="text" id="cost" value="23 485 Kč" readonly />
 					<a class="copy" data-clipboard-target="#cost">
-						<copy v-if="!desktopVersion" />
-						<copy-lg v-else />
+						<copy />
 					</a>
 				</label>
 				<div class="specific-info">
@@ -57,8 +54,7 @@
 					<span>Variabilní symbol</span>
 					<input type="text" id="variable-symbol" value="6074862244" readonly />
 					<a class="copy" data-clipboard-target="#variable-symbol">
-						<copy v-if="!desktopVersion" />
-						<copy-lg v-else />
+						<copy />
 					</a>
 				</label>
 			</div>
@@ -94,13 +90,11 @@
 					</p>
 					<div>
 						<a href="">
-							<email v-if="!desktopVersion" />
-							<email-lg v-else />
+							<email />
 							<span>Poslat e-mailem</span>
 						</a>
 						<a href="">
-							<print v-if="!desktopVersion" />
-							<print-lg v-else />
+							<print />
 							<span>Vytisknout</span>
 						</a>
 					</div>
@@ -112,13 +106,6 @@
 <script>
 export default {
 	name: 'PayOtherMethod',
-
-	props: {
-		desktopVersion: {
-			type: Boolean,
-			default: false,
-		},
-	},
 
 	methods: {
 		back() {
