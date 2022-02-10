@@ -27,6 +27,14 @@
 			}
 
 			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+				> div {
+					label {
+						input {
+							padding-left: 12px;
+						}
+					}
+				}
+
 				.specific-info {
 					p {
 						font-size: 14px;

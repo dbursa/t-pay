@@ -74,6 +74,15 @@
 
 			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
 				margin-bottom: 40px;
+
+				> div {
+					label {
+						input {
+							padding-left: 12px;
+						}
+					}
+				}
+
 				.btns {
 					margin-top: 28px;
 

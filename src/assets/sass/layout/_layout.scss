@@ -288,6 +288,10 @@ main {
 				height: 800px;
 				border-radius: $border-radius-lg;
 				padding: 0 40px;
+
+				&.detail-payment {
+					margin-top: auto;
+				}
 			}
 		}
 	}

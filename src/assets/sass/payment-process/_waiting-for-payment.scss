@@ -82,6 +82,8 @@
 		}
 
 		@media (min-width: $tablet) {
+			max-width: 400px;
+
 			p {
 				font-size: 16px;
 				line-height: 1.5;
@@ -93,6 +95,8 @@
 		}
 
 		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			max-width: 480px;
+
 			p {
 				font-size: 16px;
 				line-height: 1.5;

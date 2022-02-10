@@ -200,7 +200,9 @@ main {
       width: 480px;
       height: 800px;
       border-radius: 8px;
-      padding: 0 40px; } }
+      padding: 0 40px; }
+      main .table-wrapper .main-table.detail-payment {
+        margin-top: auto; } }
   main footer {
     display: flex;
     flex-direction: row;
@@ -880,6 +882,8 @@ main {
     margin-bottom: 130.8px; } }
 
 @media (min-width: 1400px) and (min-height: 1000px) {
+  .pay-other-method.overview-basis form > div label input {
+    padding-left: 12px; }
   .pay-other-method.overview-basis form .specific-info p {
     font-size: 14px;
     line-height: 1.25; } }
@@ -958,10 +962,12 @@ main {
   @media (min-width: 1400px) and (min-height: 1000px) {
     .pay-with-internet-banking.overview-basis form {
       margin-bottom: 40px; }
+      .pay-with-internet-banking.overview-basis form > div label input {
+        padding-left: 12px; }
       .pay-with-internet-banking.overview-basis form .btns {
         margin-top: 28px; }
         .pay-with-internet-banking.overview-basis form .btns a {
-          height: 46px;
+          height: 48px;
           font-size: 16px;
           line-height: 1.4; }
           .pay-with-internet-banking.overview-basis form .btns a span {
@@ -1441,7 +1447,7 @@ main {
           margin-top: 12px; } }
     @media (min-width: 1400px) and (min-height: 1000px) {
       .payment-failed .btns button {
-        height: 46px;
+        height: 48px;
         font-size: 16px;
         line-height: 1.4; }
         .payment-failed .btns button span {
@@ -1523,22 +1529,26 @@ main {
       .waiting-for-payment .bottom button svg path {
         fill: #1f46ed; }
     @media (min-width: 768px) {
-      .waiting-for-payment .bottom p {
-        font-size: 16px;
-        line-height: 1.5; }
-      .waiting-for-payment .bottom button {
-        height: 46px;
-        font-size: 16px;
-        line-height: 1.4; }
-        .waiting-for-payment .bottom button span {
-          margin-right: 12px; } }
+      .waiting-for-payment .bottom {
+        max-width: 400px; }
+        .waiting-for-payment .bottom p {
+          font-size: 16px;
+          line-height: 1.5; }
+        .waiting-for-payment .bottom button {
+          height: 48px;
+          font-size: 16px;
+          line-height: 1.4; }
+          .waiting-for-payment .bottom button span {
+            margin-right: 12px; } }
     @media (min-width: 1400px) and (min-height: 1000px) {
-      .waiting-for-payment .bottom p {
-        font-size: 16px;
-        line-height: 1.5; }
-      .waiting-for-payment .bottom button {
-        height: 46px;
-        font-size: 16px;
-        line-height: 1.4; }
-        .waiting-for-payment .bottom button span {
-          margin-right: 12px; } }
+      .waiting-for-payment .bottom {
+        max-width: 480px; }
+        .waiting-for-payment .bottom p {
+          font-size: 16px;
+          line-height: 1.5; }
+        .waiting-for-payment .bottom button {
+          height: 48px;
+          font-size: 16px;
+          line-height: 1.4; }
+          .waiting-for-payment .bottom button span {
+            margin-right: 12px; } }
