@@ -178,6 +178,7 @@ main {
 			position: absolute;
 			width: 41px;
 			top: 34px;
+			z-index: 100;
 
 			a {
 				text-decoration: none;
@@ -248,7 +249,7 @@ main {
 		.main-table {
 			display: flex;
 			align-items: center;
-			height: 662px;
+			min-height: 662px;
 			width: 272px;
 			border-radius: $border-radius;
 			padding: 0 12px;
@@ -271,6 +272,7 @@ main {
 			.main-table {
 				width: 400px;
 				height: 620px;
+				min-height: initial;
 				display: flex;
 				align-items: center;
 				border-radius: $border-radius-lg;
@@ -282,25 +284,25 @@ main {
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			.main-table {
-				width: 480px;
-				height: 800px;
-				border-radius: $border-radius-lg;
-				padding: 0 40px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	.main-table {
+		// 		width: 480px;
+		// 		height: 800px;
+		// 		border-radius: $border-radius-lg;
+		// 		padding: 0 40px;
 
-				&.detail-payment {
-					margin-top: auto;
-				}
-			}
-		}
+		// 		&.detail-payment {
+		// 			margin-top: auto;
+		// 		}
+		// 	}
+		// }
 	}
 
 	footer {
 		@include row;
 		width: 100%;
 		justify-content: center;
-		margin-top: 12px;
+		margin: 12px 0;
 
 		p {
 			display: flex;
@@ -312,23 +314,15 @@ main {
 		}
 
 		@media (min-width: $tablet) {
-			position: absolute;
-			bottom: 28px;
-
-			p {
-				font-size: 12px;
-			}
-		}
-
-		@media (min-width: $desktop-sm) {
 			@include col;
 			width: 128px;
 			margin: 0;
 			position: absolute;
 			right: 24px;
-			bottom: calc(50% - 360px);
+			bottom: 28px;
 
 			p {
+				font-size: 12px;
 				text-align: right;
 				margin: 0;
 				margin-bottom: 12px;
@@ -339,23 +333,23 @@ main {
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			width: 100%;
-			@include row;
-			justify-content: center;
-			right: initial;
-			bottom: 28px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	width: 100%;
+		// 	@include row;
+		// 	justify-content: center;
+		// 	right: initial;
+		// 	bottom: 28px;
 
-			p {
-				margin: 0;
-				font-size: 13px;
-				line-height: 1.4;
-				margin-right: 12px;
-			}
+		// 	p {
+		// 		margin: 0;
+		// 		font-size: 13px;
+		// 		line-height: 1.4;
+		// 		margin-right: 12px;
+		// 	}
 
-			svg {
-				margin: 0;
-			}
-		}
+		// 	svg {
+		// 		margin: 0;
+		// 	}
+		// }
 	}
 }

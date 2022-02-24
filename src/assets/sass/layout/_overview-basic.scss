@@ -1,11 +1,13 @@
 .overview-basis {
+	margin: 20px 0;
+
 	.back {
 		@include back;
 	}
 
 	.header {
 		@include col;
-		margin: 20px 0;
+		margin-bottom: 20px;
 
 		div {
 			margin-bottom: 8px;
@@ -28,9 +30,6 @@
 		}
 
 		@media (min-width: $tablet) {
-			margin-top: 20px;
-			margin-bottom: 20px;
-
 			div {
 				margin-bottom: 12px;
 				h1 {
@@ -44,21 +43,21 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			margin-top: 36px;
-			margin-bottom: 40px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	margin-top: 36px;
+		// 	margin-bottom: 40px;
 
-			div {
-				h1 {
-					font-size: 36px;
-					line-height: 1.3;
-				}
-			}
+		// 	div {
+		// 		h1 {
+		// 			font-size: 36px;
+		// 			line-height: 1.3;
+		// 		}
+		// 	}
 
-			p {
-				font-size: 18px;
-			}
-		}
+		// 	p {
+		// 		font-size: 18px;
+		// 	}
+		// }
 	}
 
 	form {
@@ -167,36 +166,36 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			> div {
-				margin-bottom: 20px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	> div {
+		// 		margin-bottom: 20px;
 
-				label {
-					font-size: 14px;
-					line-height: 1.4;
-					letter-spacing: 0.1em;
+		// 		label {
+		// 			font-size: 14px;
+		// 			line-height: 1.4;
+		// 			letter-spacing: 0.1em;
 
-					input {
-						@include form-input-desktop;
-					}
+		// 			input {
+		// 				@include form-input-desktop;
+		// 			}
 
-					a {
-						right: 13px;
-						bottom: 15px;
+		// 			a {
+		// 				right: 13px;
+		// 				bottom: 15px;
 
-						span {
-							margin-right: 7px;
-							font-size: 14px;
-							line-height: 1.4;
-						}
+		// 				span {
+		// 					margin-right: 7px;
+		// 					font-size: 14px;
+		// 					line-height: 1.4;
+		// 				}
 
-						&.copy-text {
-							bottom: 14px;
-						}
-					}
-				}
-			}
-		}
+		// 				&.copy-text {
+		// 					bottom: 14px;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 
 	.group {
@@ -348,34 +347,34 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			div {
-				&.qr-img {
-					img {
-						width: 192px;
-						height: 192px;
-					}
-				}
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	div {
+		// 		&.qr-img {
+		// 			img {
+		// 				width: 192px;
+		// 				height: 192px;
+		// 			}
+		// 		}
 
-				&.qr-text {
-					font-size: 14px;
-					margin-bottom: 20px;
-				}
-			}
+		// 		&.qr-text {
+		// 			font-size: 14px;
+		// 			margin-bottom: 20px;
+		// 		}
+		// 	}
 
-			.bill {
-				font-size: 14px;
+		// 	.bill {
+		// 		font-size: 14px;
 
-				div {
-					a {
-						svg {
-							margin-right: 8px;
-							width: 20px;
-							height: 20px;
-						}
-					}
-				}
-			}
-		}
+		// 		div {
+		// 			a {
+		// 				svg {
+		// 					margin-right: 8px;
+		// 					width: 20px;
+		// 					height: 20px;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 }

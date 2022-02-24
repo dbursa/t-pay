@@ -61,10 +61,6 @@
 					<span>Přejít do Bankovnictví</span>
 					<external-link />
 				</a>
-				<a href="#" target="_blank">
-					<span>Přejít do Business Bankovnictví</span>
-					<external-link />
-				</a>
 			</div>
 		</form>
 

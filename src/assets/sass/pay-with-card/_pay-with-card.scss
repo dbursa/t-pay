@@ -1,4 +1,6 @@
 .pay-with-card {
+	margin-top: 26px;
+
 	.back {
 		@include back;
 	}
@@ -35,7 +37,7 @@
 
 		@media (min-width: $tablet) {
 			@include mx-auto;
-			margin-top: 25px;
+			margin-top: 29px;
 			margin-bottom: 20px;
 
 			div {
@@ -60,23 +62,23 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			@include row;
-			@include mx-auto;
-			justify-content: space-around;
-			width: 350px;
-			margin-top: 35px;
-			margin-bottom: 40px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	@include row;
+		// 	@include mx-auto;
+		// 	justify-content: space-around;
+		// 	width: 350px;
+		// 	margin-top: 35px;
+		// 	margin-bottom: 40px;
 
-			div {
-				margin: 0;
-			}
+		// 	div {
+		// 		margin: 0;
+		// 	}
 
-			h1 {
-				font-size: 36px;
-				line-height: 1.3;
-			}
-		}
+		// 	h1 {
+		// 		font-size: 36px;
+		// 		line-height: 1.3;
+		// 	}
+		// }
 	}
 
 	form {
@@ -347,57 +349,57 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			div {
-				margin-bottom: 24px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	div {
+		// 		margin-bottom: 24px;
 
-				label {
-					font-size: 14px;
-					line-height: 1.4;
-					letter-spacing: 0.1em;
+		// 		label {
+		// 			font-size: 14px;
+		// 			line-height: 1.4;
+		// 			letter-spacing: 0.1em;
 
-					input {
-						@include form-input-desktop;
+		// 			input {
+		// 				@include form-input-desktop;
 
-						&:focus-visible {
-							@include focus-input;
-						}
-					}
+		// 				&:focus-visible {
+		// 					@include focus-input;
+		// 				}
+		// 			}
 
-					&::before {
-						height: $input-height-desktop;
-					}
-				}
+		// 			&::before {
+		// 				height: $input-height-desktop;
+		// 			}
+		// 		}
 
-				&:nth-child(2) {
-					label {
-						&.mastercard {
-							svg {
-								width: 40px;
-								height: 31px;
-								right: 20px;
-								bottom: 10px;
-							}
-						}
+		// 		&:nth-child(2) {
+		// 			label {
+		// 				&.mastercard {
+		// 					svg {
+		// 						width: 40px;
+		// 						height: 31px;
+		// 						right: 20px;
+		// 						bottom: 10px;
+		// 					}
+		// 				}
 
-						&.visa {
-							svg {
-								width: 40px;
-								right: 20px;
-								bottom: 9px;
-							}
-						}
-					}
-				}
+		// 				&.visa {
+		// 					svg {
+		// 						width: 40px;
+		// 						right: 20px;
+		// 						bottom: 9px;
+		// 					}
+		// 				}
+		// 			}
+		// 		}
 
-				&:nth-child(4) {
-					margin-bottom: 40px;
-				}
-			}
+		// 		&:nth-child(4) {
+		// 			margin-bottom: 40px;
+		// 		}
+		// 	}
 
-			button {
-				@include btn-desktop;
-			}
-		}
+		// 	button {
+		// 		@include btn-desktop;
+		// 	}
+		// }
 	}
 }

@@ -26,22 +26,22 @@
 				margin-bottom: 130.8px;
 			}
 
-			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-				> div {
-					label {
-						input {
-							padding-left: 12px;
-						}
-					}
-				}
+			// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			// 	> div {
+			// 		label {
+			// 			input {
+			// 				padding-left: 12px;
+			// 			}
+			// 		}
+			// 	}
 
-				.specific-info {
-					p {
-						font-size: 14px;
-						line-height: 1.25;
-					}
-				}
-			}
+			// 	.specific-info {
+			// 		p {
+			// 			font-size: 14px;
+			// 			line-height: 1.25;
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }

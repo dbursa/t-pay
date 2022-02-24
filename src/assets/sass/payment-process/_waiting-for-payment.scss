@@ -2,7 +2,7 @@
 	width: 100%;
 
 	.waiting {
-		margin-bottom: 161px;
+		margin-bottom: 78px;
 		text-align: center;
 
 		svg {
@@ -43,21 +43,21 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			svg {
-				margin-bottom: 40px;
-			}
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	svg {
+		// 		margin-bottom: 40px;
+		// 	}
 
-			h1 {
-				font-size: 32px;
-				line-height: 1.25;
-				margin-bottom: 12px;
-			}
+		// 	h1 {
+		// 		font-size: 32px;
+		// 		line-height: 1.25;
+		// 		margin-bottom: 12px;
+		// 	}
 
-			p {
-				font-size: 20px;
-			}
-		}
+		// 	p {
+		// 		font-size: 20px;
+		// 	}
+		// }
 	}
 
 	.bottom {
@@ -94,17 +94,17 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			max-width: 480px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	max-width: 480px;
 
-			p {
-				font-size: 16px;
-				line-height: 1.5;
-			}
+		// 	p {
+		// 		font-size: 16px;
+		// 		line-height: 1.5;
+		// 	}
 
-			button {
-				@include btn-sm-desktop;
-			}
-		}
+		// 	button {
+		// 		@include btn-sm-desktop;
+		// 	}
+		// }
 	}
 }

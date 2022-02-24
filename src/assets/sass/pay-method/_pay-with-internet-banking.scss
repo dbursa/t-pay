@@ -28,15 +28,15 @@
 					}
 				}
 
-				@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-					svg {
-						margin-right: 10px;
-					}
+				// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+				// 	svg {
+				// 		margin-right: 10px;
+				// 	}
 
-					h1 {
-						margin-left: 10px;
-					}
-				}
+				// 	h1 {
+				// 		margin-left: 10px;
+				// 	}
+				// }
 			}
 		}
 
@@ -53,11 +53,6 @@
 					span {
 						margin-right: 6px;
 					}
-
-					&:nth-child(2) {
-						@include btn-sm-reverse;
-						margin-top: 8px;
-					}
 				}
 			}
 
@@ -72,25 +67,25 @@
 				}
 			}
 
-			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-				margin-bottom: 40px;
+			// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			// 	margin-bottom: 40px;
 
-				> div {
-					label {
-						input {
-							padding-left: 12px;
-						}
-					}
-				}
+			// 	> div {
+			// 		label {
+			// 			input {
+			// 				padding-left: 12px;
+			// 			}
+			// 		}
+			// 	}
 
-				.btns {
-					margin-top: 28px;
+			// 	.btns {
+			// 		margin-top: 28px;
 
-					a {
-						@include btn-sm-desktop;
-					}
-				}
-			}
+			// 		a {
+			// 			@include btn-sm-desktop;
+			// 		}
+			// 	}
+			// }
 		}
 	}
 }

@@ -45,23 +45,23 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			svg {
-				height: 120px;
-				width: 120px;
-				margin-bottom: 40px;
-			}
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	svg {
+		// 		height: 120px;
+		// 		width: 120px;
+		// 		margin-bottom: 40px;
+		// 	}
 
-			h1 {
-				font-size: 32px;
-				line-height: 1.25;
-				margin-bottom: 12px;
-			}
+		// 	h1 {
+		// 		font-size: 32px;
+		// 		line-height: 1.25;
+		// 		margin-bottom: 12px;
+		// 	}
 
-			p {
-				font-size: 20px;
-			}
-		}
+		// 	p {
+		// 		font-size: 20px;
+		// 	}
+		// }
 	}
 
 	.list {
@@ -126,30 +126,30 @@
 			}
 		}
 
-		@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-			margin-bottom: 112px;
+		// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+		// 	margin-bottom: 112px;
 
-			p {
-				font-size: 16px;
-				line-height: 1.75;
-			}
+		// 	p {
+		// 		font-size: 16px;
+		// 		line-height: 1.75;
+		// 	}
 
-			ul {
-				max-width: 293px;
+		// 	ul {
+		// 		max-width: 293px;
 
-				li {
-					font-size: 16px;
-					line-height: 1.25;
-					margin-bottom: 16px;
+		// 		li {
+		// 			font-size: 16px;
+		// 			line-height: 1.25;
+		// 			margin-bottom: 16px;
 
-					svg {
-						height: 20px;
-						width: 20px;
-						left: -32px;
-					}
-				}
-			}
-		}
+		// 			svg {
+		// 				height: 20px;
+		// 				width: 20px;
+		// 				left: -32px;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 
 	.btns {
@@ -169,9 +169,9 @@
 				}
 			}
 
-			@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-				@include btn-sm-desktop;
-			}
+			// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+			// 	@include btn-sm-desktop;
+			// }
 		}
 	}
 }

@@ -494,51 +494,51 @@
 		}
 	}
 
-	@media (min-width: $desktop-width) and (min-height: $desktop-height) {
-		h2 {
-			font-size: 14px;
-			line-height: 1.1;
-			margin-bottom: 14px;
-		}
+	// @media (min-width: $desktop-width) and (min-height: $desktop-height) {
+	// 	h2 {
+	// 		font-size: 14px;
+	// 		line-height: 1.1;
+	// 		margin-bottom: 14px;
+	// 	}
 
-		> div {
-			margin-bottom: 20px;
-			font-size: 16px;
+	// 	> div {
+	// 		margin-bottom: 20px;
+	// 		font-size: 16px;
 
-			a {
-				&.btn {
-					height: 64px;
-					margin-bottom: 8px;
+	// 		a {
+	// 			&.btn {
+	// 				height: 64px;
+	// 				margin-bottom: 8px;
 
-					div {
-						font-size: 16px;
-					}
-				}
-			}
+	// 				div {
+	// 					font-size: 16px;
+	// 				}
+	// 			}
+	// 		}
 
-			button {
-				width: 152px;
-				height: 64px;
-			}
-		}
+	// 		button {
+	// 			width: 152px;
+	// 			height: 64px;
+	// 		}
+	// 	}
 
-		.internet-banking {
-			div {
-				margin-bottom: 12px;
-			}
-		}
+	// 	.internet-banking {
+	// 		div {
+	// 			margin-bottom: 12px;
+	// 		}
+	// 	}
 
-		.others {
-			margin-bottom: 0;
+	// 	.others {
+	// 		margin-bottom: 0;
 
-			div {
-				button {
-					&:first-child {
-						font-size: 14px;
-						line-height: 1.1;
-					}
-				}
-			}
-		}
-	}
+	// 		div {
+	// 			button {
+	// 				&:first-child {
+	// 					font-size: 14px;
+	// 					line-height: 1.1;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
