@@ -42,7 +42,7 @@
 				</div>
 				<div>
 					<label for="">
-						<span>3-místný CVV kód <span class="required">*</span></span>
+						<span>3místný CVV kód <span class="required">*</span></span>
 						<input type="text" placeholder="Vzadu na kartě" />
 					</label>
 				</div>
